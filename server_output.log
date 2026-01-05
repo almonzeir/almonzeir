@@ -1,0 +1,9 @@
+
+> almonzer-portfolio@0.1.0 start
+> next start
+
+   ▲ Next.js 14.1.0
+   - Local:        http://localhost:3000
+
+ ✓ Ready in 469ms
+ ⨯ The requested resource isn't a valid image for /Images/profile.jpg received text/html; charset=utf-8

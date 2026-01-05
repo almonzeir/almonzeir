@@ -1,0 +1,2277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almonzer Hamid - AI Innovator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0B0F19',
+                            800: '#0E1B3C',
+                        }
+                    },
+                    dropShadow: {
+                        glow: '0 0 40px rgba(0, 198, 255, 0.45)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 0 rgba(0, 123, 255, 0.0);
+            }
+            50% {
+                box-shadow: 0 0 35px rgba(0, 123, 255, 0.35);
+            }
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes shimmerSweep {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .text-shine {
+            background-image: linear-gradient(120deg, rgba(0, 198, 255, 0.85), rgba(0, 123, 255, 0.95), rgba(181, 233, 255, 0.9));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmerSweep 6s ease-in-out infinite;
+            text-shadow: 0 0 32px rgba(0, 198, 255, 0.35);
+        }
+
+        .tech-name {
+            position: relative;
+            display: inline-block;
+            padding-inline: 0.5rem;
+        }
+
+        .tech-name:hover .text-shine {
+            filter: drop-shadow(0 0 28px rgba(0, 198, 255, 0.55));
+        }
+
+        #hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Let clicks pass through to content */
+            z-index: 0;
+            opacity: 0.8;
+        }
+
+        @keyframes calculusTrailDrift {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, 0, 0) scale(1);
+                filter: blur(0);
+            }
+            15% {
+                opacity: 0.85;
+            }
+            100% {
+                opacity: 0;
+                transform: translate3d(var(--tx, 0px), var(--ty, -80px), 0) scale(0.65);
+                filter: blur(2px);
+            }
+        }
+
+        .calculus-trail-canvas {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+
+        .calculus-symbol {
+            position: absolute;
+            font-family: 'STIX Two Math', 'Cambria Math', 'Times New Roman', serif;
+            font-size: clamp(1.1rem, 0.9rem + 0.8vw, 2.1rem);
+            color: rgba(140, 230, 255, 0.75);
+            text-shadow: 0 0 14px rgba(0, 198, 255, 0.45);
+            filter: drop-shadow(0 0 8px rgba(0, 198, 255, 0.35));
+            pointer-events: none;
+            opacity: 0;
+            animation: calculusTrailDrift var(--duration, 2.8s) ease-out forwards;
+            will-change: transform, opacity;
+        }
+
+        @keyframes spinSlow {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulseBadge {
+            0%, 100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            50% {
+                opacity: 0.6;
+                transform: translateY(-2px);
+            }
+        }
+
+        .animate-spin-slow {
+            animation: spinSlow 24s linear infinite;
+        }
+
+        .publication-title:hover,
+        .publication-title:focus-visible {
+            color: #bde7ff;
+            text-shadow: 0 0 18px rgba(0, 198, 255, 0.5);
+        }
+
+        .publication-badge {
+            animation: pulseBadge 6s ease-in-out infinite;
+        }
+
+        .publication-title {
+            position: relative;
+        }
+
+        .publication-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -0.5rem;
+            height: 0.25rem;
+            border-radius: 9999px;
+            background: linear-gradient(90deg, rgba(0, 198, 255, 0.3), rgba(255, 107, 0, 0.5), rgba(0, 198, 255, 0.3));
+            filter: blur(4px);
+            opacity: 0.85;
+        }
+
+        .publication-card {
+            position: relative;
+            border-radius: 24px;
+            backdrop-filter: blur(6px);
+            background: rgba(9, 21, 48, 0.72);
+        }
+
+        .publication-glow {
+            display: inline-block;
+            background-image: linear-gradient(120deg, rgba(0, 198, 255, 0.95), rgba(255, 107, 0, 0.9), rgba(165, 243, 252, 0.95));
+            background-size: 220% 220%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmerSweep 5.5s ease-in-out infinite, textPulse 4s ease-in-out infinite;
+            text-shadow: 0 0 28px rgba(0, 198, 255, 0.45);
+        }
+
+        @keyframes textPulse {
+            0%, 100% {
+                filter: drop-shadow(0 0 12px rgba(0, 198, 255, 0.45));
+            }
+            50% {
+                filter: drop-shadow(0 0 18px rgba(255, 107, 0, 0.55));
+            }
+        }
+
+        @keyframes hackathonGlow {
+            0% {
+                box-shadow: 0 0 0 rgba(0, 198, 255, 0.0);
+                transform: translateY(0);
+            }
+            50% {
+                box-shadow: 0 0 28px rgba(0, 198, 255, 0.35);
+                transform: translateY(-4px);
+            }
+            100% {
+                box-shadow: 0 0 0 rgba(0, 198, 255, 0.0);
+                transform: translateY(0);
+            }
+        }
+
+        .hackathon-badge {
+            animation: hackathonGlow 8s ease-in-out infinite;
+        }
+
+        .hackathon-badge:nth-child(2) {
+            animation-delay: 1.2s;
+        }
+
+        .hackathon-badge:nth-child(3) {
+            animation-delay: 2.4s;
+        }
+
+        @keyframes neuralLinesDrift {
+            0% {
+                opacity: 0.32;
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                opacity: 0.55;
+                transform: rotate(2deg) scale(1.04);
+            }
+            100% {
+                opacity: 0.32;
+                transform: rotate(0deg) scale(1);
+            }
+        }
+
+        @keyframes neuralNodesPulse {
+            0%, 100% {
+                opacity: 0.35;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.7;
+                transform: scale(1.08);
+            }
+        }
+
+        .neural-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .neural-card::before {
+            content: '';
+            position: absolute;
+            inset: -45%;
+            background:
+                radial-gradient(circle at 18% 28%, rgba(0, 198, 255, 0.22) 0, rgba(0, 198, 255, 0.0) 55%),
+                radial-gradient(circle at 78% 36%, rgba(99, 102, 241, 0.18) 0, rgba(99, 102, 241, 0.0) 52%),
+                radial-gradient(circle at 42% 82%, rgba(45, 212, 191, 0.16) 0, rgba(45, 212, 191, 0.0) 58%);
+            filter: blur(0.5px);
+            mix-blend-mode: screen;
+            opacity: 0.4;
+            animation: neuralLinesDrift 16s ease-in-out infinite;
+        }
+
+        .neural-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(120deg, rgba(56, 189, 248, 0.12) 1px, transparent 1px),
+                linear-gradient(240deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
+            background-size: 80px 80px, 120px 120px;
+            mix-blend-mode: screen;
+            opacity: 0.22;
+            animation: neuralLinesDrift 24s linear infinite reverse;
+            pointer-events: none;
+        }
+
+        .neural-card .neural-node {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 9999px;
+            background: rgba(34, 211, 238, 0.6);
+            box-shadow: 0 0 14px rgba(34, 211, 238, 0.55);
+            animation: neuralNodesPulse 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes gloryPulse {
+            0%, 100% {
+                opacity: 0.4;
+                transform: scale(1);
+                filter: blur(18px);
+            }
+            50% {
+                opacity: 0.75;
+                transform: scale(1.05);
+                filter: blur(24px);
+            }
+        }
+
+        @keyframes glorySweep {
+            0% {
+                transform: rotate(0deg) scale(1);
+                opacity: 0.25;
+            }
+            50% {
+                opacity: 0.55;
+            }
+            100% {
+                transform: rotate(360deg) scale(1);
+                opacity: 0.25;
+            }
+        }
+
+        @keyframes gloryDrift {
+            0% {
+                transform: translate3d(-8%, -6%, 0);
+            }
+            50% {
+                transform: translate3d(12%, 10%, 0);
+            }
+            100% {
+                transform: translate3d(-8%, -6%, 0);
+            }
+        }
+
+        @keyframes gloryStars {
+            0% {
+                transform: translate3d(-6%, -4%, 0) scale(1);
+                opacity: 0.42;
+            }
+            50% {
+                transform: translate3d(6%, 4%, 0) scale(1.05);
+                opacity: 0.72;
+            }
+            100% {
+                transform: translate3d(-6%, -4%, 0) scale(1);
+                opacity: 0.42;
+            }
+        }
+
+        @keyframes gloryFlare {
+            0%, 100% {
+                opacity: 0.18;
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                opacity: 0.42;
+                transform: rotate(12deg) scale(1.08);
+            }
+        }
+
+        .glory-card {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+        }
+
+        .glory-card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(130deg, rgba(0, 170, 255, 0.6), rgba(56, 189, 248, 0.18), rgba(99, 102, 241, 0.5));
+            filter: blur(18px);
+            opacity: 0.55;
+            z-index: -1;
+            animation: gloryPulse 7s ease-in-out infinite;
+        }
+
+        .glory-card::after {
+            content: '';
+            position: absolute;
+            inset: -18%;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.25) 0, transparent 55%),
+                radial-gradient(circle at 78% 32%, rgba(129, 140, 248, 0.22) 0, transparent 60%),
+                radial-gradient(circle at 46% 78%, rgba(34, 211, 238, 0.25) 0, transparent 55%);
+            opacity: 0.35;
+            z-index: -2;
+            animation: gloryDrift 18s ease-in-out infinite;
+            mix-blend-mode: screen;
+        }
+
+        .glory-card-overlay {
+            position: absolute;
+            inset: -120%;
+            background: conic-gradient(from 120deg, rgba(14, 165, 233, 0.18), rgba(8, 47, 73, 0.0), rgba(129, 140, 248, 0.24), rgba(14, 165, 233, 0.18));
+            opacity: 0.38;
+            filter: blur(70px);
+            z-index: 0;
+            mix-blend-mode: screen;
+            animation: glorySweep 22s linear infinite;
+            pointer-events: none;
+        }
+
+        .glory-stars {
+            position: absolute;
+            inset: -45%;
+            background:
+                radial-gradient(circle at 18% 24%, rgba(224, 242, 254, 0.48) 0, rgba(224, 242, 254, 0) 50%),
+                radial-gradient(circle at 66% 32%, rgba(165, 243, 252, 0.45) 0, rgba(165, 243, 252, 0) 52%),
+                radial-gradient(circle at 32% 74%, rgba(191, 219, 254, 0.38) 0, rgba(191, 219, 254, 0) 55%),
+                radial-gradient(circle at 82% 72%, rgba(14, 165, 233, 0.45) 0, rgba(14, 165, 233, 0) 58%);
+            filter: blur(1.5px);
+            mix-blend-mode: screen;
+            animation: gloryStars 14s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .glory-flare {
+            position: absolute;
+            inset: -30%;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(14, 165, 233, 0.38) 0, rgba(14, 165, 233, 0) 55%),
+                radial-gradient(circle at 80% 60%, rgba(99, 102, 241, 0.32) 0, rgba(99, 102, 241, 0) 60%),
+                linear-gradient(120deg, rgba(34, 211, 238, 0.25), rgba(59, 130, 246, 0.1), rgba(34, 211, 238, 0.2));
+            mix-blend-mode: screen;
+            filter: blur(22px);
+            animation: gloryFlare 18s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .glory-title {
+            display: inline-block;
+            background-image: linear-gradient(120deg, rgba(56, 189, 248, 0.95), rgba(14, 165, 233, 0.85), rgba(129, 140, 248, 0.95));
+            background-size: 220% 220%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmerSweep 5s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(56, 189, 248, 0.45);
+        }
+
+        .glory-heading {
+            color: #e7f7ff;
+            text-shadow: 0 0 28px rgba(34, 211, 238, 0.4);
+        }
+
+        .glory-body {
+            color: rgba(222, 245, 255, 0.88);
+        }
+
+        .glory-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .glory-badge {
+            box-shadow: 0 0 28px rgba(14, 165, 233, 0.4);
+            background: linear-gradient(130deg, rgba(8, 47, 73, 0.85), rgba(14, 165, 233, 0.35));
+            border-color: rgba(165, 243, 252, 0.38) !important;
+        }
+
+        .glory-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(165, 243, 252, 0.45);
+            background: linear-gradient(140deg, rgba(8, 47, 73, 0.85), rgba(14, 165, 233, 0.4));
+            padding: 0.4rem 0.95rem;
+            font-size: 0.65rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: rgba(224, 247, 255, 0.9);
+            box-shadow: 0 0 26px rgba(14, 165, 233, 0.35);
+        }
+
+        .glory-chip i {
+            color: rgba(224, 247, 255, 0.9);
+            font-size: 0.7rem;
+        }
+
+        @keyframes celebrationPulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.75;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+        }
+
+        @keyframes celebrationSparkle {
+            0% {
+                opacity: 0;
+                transform: scale(0.6) translate3d(0, 0, 0);
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1.35) translate3d(var(--tx, 35px), var(--ty, -45px), 0);
+            }
+        }
+
+        @keyframes shimmerUnderline {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 200% 50%;
+            }
+        }
+
+        @keyframes tagPulse {
+            0%, 100% {
+                box-shadow: 0 0 0 rgba(0, 194, 255, 0.0);
+            }
+            50% {
+                box-shadow: 0 0 22px rgba(0, 194, 255, 0.35);
+            }
+        }
+
+        .celebration-card {
+            position: relative;
+            background: linear-gradient(145deg, #00122B 0%, #002B5F 65%);
+            border-radius: 28px;
+            border: 1px solid rgba(0, 194, 255, 0.35);
+            box-shadow: 0 35px 95px rgba(0, 16, 45, 0.65);
+            overflow: hidden;
+        }
+
+        .celebration-card::before {
+            content: '';
+            position: absolute;
+            inset: -25%;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(0, 194, 255, 0.18), transparent 65%),
+                radial-gradient(circle at 80% 15%, rgba(109, 92, 255, 0.22), transparent 60%),
+                radial-gradient(circle at 50% 80%, rgba(0, 255, 204, 0.18), transparent 68%);
+            mix-blend-mode: screen;
+            opacity: 0.65;
+            filter: blur(1px);
+        }
+
+        .celebration-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            border: 1px solid rgba(109, 92, 255, 0.18);
+            box-shadow: inset 0 0 45px rgba(0, 194, 255, 0.15);
+            pointer-events: none;
+        }
+
+        .celebration-sparkles {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .celebration-card .celebration-sparkles span {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 999px;
+            background: rgba(255, 216, 107, 0.85);
+            box-shadow: 0 0 18px rgba(255, 216, 107, 0.85), 0 0 26px rgba(0, 194, 255, 0.65);
+            opacity: 0;
+            animation: celebrationSparkle 3.8s ease-out forwards;
+            animation-play-state: paused;
+            will-change: opacity, transform;
+        }
+
+        .celebration-card.fade-up.is-visible .celebration-sparkles span {
+            animation-play-state: running;
+        }
+
+        .celebration-sparkles span:nth-child(1) {
+            top: 14%;
+            left: 22%;
+            --tx: -45px;
+            --ty: -60px;
+            animation-delay: 0.3s;
+        }
+
+        .celebration-sparkles span:nth-child(2) {
+            top: 34%;
+            right: 18%;
+            --tx: 32px;
+            --ty: -55px;
+            animation-delay: 1s;
+        }
+
+        .celebration-sparkles span:nth-child(3) {
+            bottom: 20%;
+            left: 28%;
+            --tx: -28px;
+            --ty: -40px;
+            animation-delay: 1.8s;
+        }
+
+        .celebration-medal {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background:
+                radial-gradient(circle at 30% 30%, rgba(0, 43, 95, 0.95), rgba(0, 17, 46, 0.95)),
+                linear-gradient(135deg, rgba(0, 43, 95, 0.45), rgba(0, 17, 46, 0.7));
+            border: 3px solid rgba(255, 216, 107, 0.8);
+            box-shadow:
+                0 0 0 10px rgba(0, 194, 255, 0.12),
+                0 0 45px rgba(0, 194, 255, 0.45);
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            animation: medalShine 8s ease-in-out infinite alternate;
+            will-change: transform, box-shadow;
+        }
+
+        .celebration-medal::before {
+            content: '';
+            position: absolute;
+            inset: 12%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 194, 255, 0.3), transparent 72%);
+            filter: blur(0.5px);
+            will-change: opacity;
+        }
+
+        .celebration-medal::after {
+            content: '';
+            position: absolute;
+            inset: -30%;
+            background: conic-gradient(from 90deg, rgba(255, 216, 107, 0.12), rgba(0, 194, 255, 0.24), rgba(255, 216, 107, 0.12));
+            opacity: 0.35;
+            will-change: opacity;
+        }
+
+        .celebration-medal-inner {
+            position: relative;
+            width: 84%;
+            height: 84%;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background:
+                radial-gradient(circle at 50% 35%, rgba(0, 194, 255, 0.35), rgba(0, 18, 46, 0.65)),
+                radial-gradient(circle at 70% 80%, rgba(0, 194, 255, 0.18), transparent 65%);
+            box-shadow: inset 0 0 25px rgba(0, 194, 255, 0.22), inset 0 0 65px rgba(0, 18, 46, 0.75);
+            overflow: hidden;
+            will-change: transform, box-shadow;
+        }
+
+        .celebration-medal svg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .celebration-medal svg text {
+            font-family: 'Orbitron', 'Poppins', 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.28em;
+            fill: rgba(234, 246, 255, 0.82);
+        }
+
+        .celebration-medal svg text.bottom-text {
+            letter-spacing: 0.32em;
+            fill: rgba(255, 216, 107, 0.9);
+        }
+
+        .celebration-medal-icons {
+            position: relative;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            font-size: 1.65rem;
+            color: rgba(234, 246, 255, 0.95);
+            text-shadow: 0 0 12px rgba(0, 194, 255, 0.6);
+        }
+
+        .celebration-medal-icons i:nth-child(1) {
+            color: #FFD86B;
+            filter: drop-shadow(0 0 12px rgba(255, 216, 107, 0.55));
+        }
+
+        .celebration-medal-icons i:nth-child(2) {
+            color: #00C2FF;
+            filter: drop-shadow(0 0 12px rgba(0, 194, 255, 0.55));
+        }
+
+        .celebration-medal-year {
+            position: relative;
+            z-index: 2;
+            margin-top: 0.75rem;
+            font-family: 'Orbitron', 'Poppins', 'Montserrat', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: rgba(0, 244, 255, 0.9);
+            text-shadow: 0 0 18px rgba(0, 194, 255, 0.55);
+            will-change: opacity, transform;
+        }
+
+        .celebration-medal-shadow {
+            position: absolute;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 130px;
+            height: 20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.45), transparent 70%);
+            filter: blur(12px);
+            opacity: 0.85;
+        }
+
+        .celebration-divider {
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(90deg, rgba(0, 194, 255, 0), rgba(0, 194, 255, 0.45), rgba(109, 92, 255, 0));
+            opacity: 0.6;
+        }
+
+        .shimmer-accent {
+            background-image: linear-gradient(120deg, rgba(255, 216, 107, 0.5), rgba(0, 194, 255, 0.3), rgba(255, 216, 107, 0.5));
+            background-size: 200% 100%;
+            animation: shimmerUnderline 3.6s linear infinite;
+        }
+
+        .pulse-chip {
+            animation: tagPulse 6.5s ease-in-out infinite;
+        }
+
+        .pulse-chip:nth-child(2) {
+            animation-delay: 1.3s;
+        }
+
+        .pulse-chip:nth-child(3) {
+            animation-delay: 2.6s;
+        }
+
+        .author-ribbon {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .author-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            border-radius: 999px;
+            border: 1px solid rgba(0, 194, 255, 0.35);
+            background: rgba(4, 18, 42, 0.55);
+            padding: 0.65rem 1.35rem 0.65rem 0.95rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(234, 246, 255, 0.9);
+            box-shadow: 0 0 24px rgba(0, 194, 255, 0.16);
+            transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+            min-width: 12rem;
+            justify-content: flex-start;
+        }
+
+        .author-chip:hover {
+            background: rgba(0, 194, 255, 0.16);
+            box-shadow: 0 0 30px rgba(0, 194, 255, 0.28);
+            transform: translateY(-2px);
+        }
+
+        .author-chip .author-initials {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.35rem;
+            height: 2.35rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(135deg, rgba(0, 194, 255, 0.85), rgba(109, 92, 255, 0.8));
+            box-shadow: 0 0 16px rgba(0, 194, 255, 0.35);
+            letter-spacing: 0.08em;
+        }
+
+        .author-chip span:last-child {
+            letter-spacing: 0.18em;
+            line-height: 1.2;
+        }
+
+        .author-chip:nth-child(2) .author-initials {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.85), rgba(14, 165, 233, 0.8));
+        }
+
+        .author-chip:nth-child(3) .author-initials {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.9), rgba(45, 212, 191, 0.85));
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-spin-slow,
+            .publication-badge,
+            .hackathon-badge,
+            .pulse-chip,
+            .floating-celebration,
+            .glory-card::before,
+            .glory-card::after,
+            .glory-card-overlay,
+            .glory-stars,
+            .glory-flare,
+            .neural-card::before,
+            .neural-card::after,
+            .neural-card .neural-node,
+            .celebration-card .celebration-sparkles span {
+                animation-duration: 1ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+        .floating-celebration {
+            animation: pulseBadge 7s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-[#0B0F19] via-[#05070F] to-black text-white font-sans antialiased selection:bg-cyan-500/40 selection:text-white">
+    <header class="px-6 lg:px-16 py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-sm uppercase tracking-[0.35em] text-white/70">
+        <span class="text-white/90 font-semibold tracking-[0.4em]">Almonzer Hamid</span>
+        <nav class="flex flex-wrap items-center gap-6">
+            <a href="#publication" class="hover:text-white transition">Publications</a>
+            <a href="#projects" class="hover:text-white transition">Projects</a>
+            <a href="#ai-for-humanity" class="hover:text-white transition">Humanity</a>
+            <a href="#ai-for-education" class="hover:text-white transition">Education</a>
+            <a href="#ai-for-innovation" class="hover:text-white transition">Automation</a>
+            <a href="#contact" class="hover:text-white transition">Contact</a>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col lg:flex-row items-center justify-between gap-16 px-6 lg:px-16 py-20" data-hero>
+        <div class="max-w-2xl space-y-8 fade-up" data-animate>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
+                <span class="tech-name">
+                    <span class="text-shine">Almonzer Hamid</span>
+                </span>
+            </h1>
+            <h2 class="text-3xl lg:text-4xl font-semibold text-white/90 leading-tight">
+                Turning ideas into <span class="text-blue-400">AI-powered</span> reality.
+            </h2>
+            <p class="text-gray-400 text-lg leading-relaxed">
+                AI Passionate &middot; Researcher &middot; Web Developer
+            </p>
+            <ul class="space-y-3 text-gray-400/90 text-base leading-relaxed list-disc pl-6 marker:text-cyan-300/80">
+                <li>Alor Setar, Malaysia based AI-focused developer and learner, building practical tools that make technology feel approachable.</li>
+                <li>Blend AI, web development, and community learning to ship language experiences for Arabic speakers and automation flows that save teams time.</li>
+                <li>Joined nationwide AI events, earned Google Developer certifications, and collaborate on responsible AI projects while staying open to new partnerships that create real impact.</li>
+            </ul>
+            <div class="flex flex-wrap gap-4">
+                <a href="#projects" class="bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-3 rounded-xl font-semibold drop-shadow-glow hover:translate-y-[-2px] hover:shadow-[0_0_30px_#00C6FF66] transition">
+                    View My Projects
+                </a>
+                <a href="resume.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 rounded-xl font-semibold text-white drop-shadow-glow hover:translate-y-[-2px] hover:shadow-[0_0_30px_#00C6FF66] transition">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
+                    <span>View Resume</span>
+                </a>
+                <a href="https://drive.google.com/file/d/1Vv_FIldUuZzcO8Jae3nYH1I2PekRRhhJ/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-blue-400/60 px-6 py-3 rounded-xl font-semibold text-blue-200 hover:bg-blue-500/10 transition">
+                    <i class="fas fa-download" aria-hidden="true"></i>
+                    <span>PDF CV</span>
+                </a>
+                <a href="#contact" class="border border-blue-400/60 px-6 py-3 rounded-xl font-semibold text-blue-200 hover:bg-blue-500/10 transition">
+                    Contact Me
+                </a>
+            </div>
+        </div>
+        <div class="w-full lg:w-[38%] flex justify-center fade-up" data-animate data-delay="150">
+            <div class="relative">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/40 via-cyan-400/30 to-blue-500/20 blur-3xl"></div>
+                <div class="portrait-frame relative flex h-[28rem] w-[24rem] items-center justify-center overflow-hidden rounded-3xl border border-blue-500/20 bg-white/5 backdrop-blur text-center">
+                    <img src="Images/Gemini_Generated_Image_brwzjibrwzjibrwz.png" alt="Almonzer Hamid portrait" class="h-full w-full object-cover drop-shadow-glow" fetchpriority="high" decoding="async" onerror="this.remove(); this.parentElement.classList.add('border-dashed','border-blue-400/40'); this.parentElement.insertAdjacentHTML('beforeend','<span class=&quot;text-gray-400 text-sm&quot;>Add your transparent portrait here.</span>');">
+                </div>
+            </div>
+        </div>
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    </section>
+
+    <!-- Publications -->
+    <section id="publication" class="relative bg-gradient-to-b from-black via-[#050913] to-[#0B0F19] text-white py-24 px-6 lg:px-16 overflow-hidden">
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40" aria-hidden="true">
+            <div class="w-[520px] h-[520px] rounded-full bg-gradient-to-r from-blue-500/60 to-cyan-400/50 blur-3xl animate-spin-slow"></div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-[#050913]/85 to-[#0B0F19]/95"></div>
+        <div class="absolute inset-0 calculus-trail-canvas pointer-events-none" aria-hidden="true"></div>
+        <div class="relative max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto fade-up" data-animate>
+                <h2 class="text-4xl lg:text-5xl font-bold mb-12">
+                    <span class="glory-title">Featured Publication</span>
+                </h2>
+            </div>
+            <div class="celebration-card relative px-8 py-14 lg:px-16 fade-up group transition-all duration-700 ease-out transform hover:scale-[1.02] hover:shadow-[0_55px_130px_rgba(0,194,255,0.55)] hover:border-cyan-200/45" data-animate data-delay="120">
+                <div class="celebration-sparkles" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="absolute -top-7 left-10 flex items-center gap-2 rounded-full border border-cyan-300/40 bg-cyan-500/20 px-5 py-1.5 text-[0.65rem] uppercase tracking-[0.45em] text-cyan-100/80 shadow-[0_0_30px_rgba(0,198,255,0.45)]">
+                    <span aria-hidden="true">&#x1F3C6;</span>
+                    <span>Scopus Global Impact 2025</span>
+                </div>
+                <div class="absolute top-8 right-10 inline-flex items-center gap-2 rounded-full border border-cyan-300/40 bg-cyan-500/15 px-4 py-1.5 text-[0.6rem] uppercase tracking-[0.4em] text-cyan-100 floating-celebration shadow-[0_0_20px_rgba(0,194,255,0.45)]">
+                    <span aria-hidden="true">&#x1F389;</span>
+                    <span>Featured in Global Impact 2025</span>
+                </div>
+                <div class="relative flex flex-col items-center gap-12">
+                    <header class="text-center space-y-4">
+                        <span class="inline-flex items-center gap-2 rounded-full border border-cyan-300/40 bg-cyan-400/15 px-4 py-1 text-xs uppercase tracking-[0.4em] text-cyan-100/85">Award-winning Research</span>
+                        <h3 class="text-3xl md:text-[2.5rem] font-semibold leading-tight text-[#EAF6FF]">
+                            <span class="block text-4xl md:text-5xl font-extrabold text-[#EAF6FF] drop-shadow-[0_0_25px_rgba(0,194,255,0.35)]">&#x1F3C6; Predicting GPA with Machine Learning</span>
+                            <span class="mt-3 inline-flex items-center justify-center rounded-full px-4 py-2 text-sm md:text-base font-medium text-[#EAF6FF] shimmer-accent">Global Impact Award 2025 &mdash; Scopus Indexed</span>
+                        </h3>
+                        <p class="text-sm uppercase tracking-[0.3em] text-[#FFD86B]/85 transition-colors duration-500 group-hover:text-[#FFECC0]">Research Team</p>
+                        <div class="author-ribbon text-sm text-[#EAF6FF]/85">
+                            <span class="author-chip">
+                                <span class="author-initials">AH</span>
+                                <span>Almonzer Hamid</span>
+                            </span>
+                            <span class="author-chip">
+                                <span class="author-initials">BG</span>
+                                <span>Bakary Gibba</span>
+                            </span>
+                            <span class="author-chip">
+                                <span class="author-initials">AA</span>
+                                <span>Altagi Abdallah</span>
+                            </span>
+                        </div>
+                        <p class="text-base text-[#EAF6FF]/90">A shining milestone redefining student success analytics.</p>
+                    </header>
+                    <div class="flex flex-col items-center gap-12 lg:flex-row lg:items-stretch lg:gap-16">
+                        <div class="relative flex flex-col items-center">
+                            <div class="absolute -inset-14 hidden lg:block rounded-full bg-cyan-400/10 blur-3xl"></div>
+                            <div class="celebration-medal">
+                                <div class="celebration-medal-shadow"></div>
+                                <div class="celebration-medal-inner">
+                                    <svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+                                        <defs>
+                                            <path id="medal-top-path" d="M 100,21 A 79,79 0 0 1 100,179" fill="none"></path>
+                                            <path id="medal-bottom-path" d="M 100,179 A 79,79 0 0 1 100,21" fill="none"></path>
+                                        </defs>
+                                        <text font-size="9" class="top-text">
+                                            <textPath xlink:href="#medal-top-path" startOffset="50%" text-anchor="middle">
+                                                SCOPUS GLOBAL IMPACT AWARD
+                                            </textPath>
+                                        </text>
+                                        <text font-size="9" class="bottom-text">
+                                            <textPath xlink:href="#medal-bottom-path" startOffset="50%" text-anchor="middle">
+                                                ALMONZER &bull; BAKARY &bull; ALTAGI
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                    <div class="celebration-medal-icons">
+                                        <i class="fas fa-sun" aria-hidden="true"></i>
+                                        <i class="fas fa-brain" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="celebration-medal-year">2025</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full max-w-xl space-y-6">
+                            <div class="celebration-divider"></div>
+                            <div class="grid gap-4">
+                                <div class="flex items-start gap-4 rounded-2xl border border-cyan-400/40 bg-white/5 px-5 py-4 shadow-[0_20px_40px_rgba(0,24,74,0.45)]">
+                                    <span class="mt-1 text-lg text-[#00C2FF]" aria-hidden="true">&#x1F4D6;</span>
+                                    <div>
+                                        <p class="text-xs uppercase tracking-[0.35em] text-cyan-100/70">Study</p>
+                                        <p class="mt-2 text-sm md:text-base text-[#EAF6FF]/95">&ldquo;Predicting GPA Using Mobile &amp; Study Behavior Data&rdquo;</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4 rounded-2xl border border-cyan-400/40 bg-white/5 px-5 py-4 shadow-[0_20px_40px_rgba(0,24,74,0.45)]">
+                                    <span class="mt-1 text-lg text-[#00C2FF]" aria-hidden="true">&#x1F9E0;</span>
+                                    <div>
+                                        <p class="text-xs uppercase tracking-[0.35em] text-cyan-100/70">Core Insight</p>
+                                        <p class="mt-2 text-sm md:text-base text-[#EAF6FF]/95">Machine learning links daily rhythms to GPA to guide equitable student support.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4 rounded-2xl border border-cyan-400/40 bg-white/5 px-5 py-4 shadow-[0_20px_40px_rgba(0,24,74,0.45)]">
+                                    <span class="mt-1 text-lg text-[#FFD86B]" aria-hidden="true">&#x1F30D;</span>
+                                    <div>
+                                        <p class="text-xs uppercase tracking-[0.35em] text-cyan-100/70">Recognition</p>
+                                        <p class="mt-2 text-sm md:text-base text-[#EAF6FF]/95">Internationally commended at Global Impact Summit 2025.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="celebration-divider"></div>
+                            <div class="flex flex-wrap items-center justify-center gap-3">
+                                <span class="pulse-chip inline-flex items-center gap-2 rounded-full border border-cyan-400/50 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-cyan-100/85">
+                                    <span aria-hidden="true">&#x1F4BB;</span>
+                                    <span>Python &bull; scikit-learn &bull; Mixed-Methods</span>
+                                </span>
+                                <span class="pulse-chip inline-flex items-center gap-2 rounded-full border border-cyan-400/50 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-cyan-100/85">
+                                    <span aria-hidden="true">&#x1F310;</span>
+                                    <span>Student Equity &bull; Predictive Analytics</span>
+                                </span>
+                            </div>
+                            <figure class="rounded-3xl border border-cyan-400/35 bg-white/5 px-6 py-6 text-center shadow-[0_22px_45px_rgba(0,24,74,0.45)]">
+                                <blockquote class="text-lg text-[#EAF6FF]/90 italic">&ldquo;A landmark in predictive equity for higher education.&rdquo;</blockquote>
+                                <figcaption class="mt-4 text-sm text-cyan-100/70">&mdash; Global Impact Review Board 2025</figcaption>
+                            </figure>
+                            <div class="flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
+                                <a href="https://www.linkedin.com/posts/almonzer-hamid-aa8693249_from-doubt-to-publication-my-first-research-activity-7343861094123282433-RMDQ?utm_source=social_share_send&amp;utm_medium=member_desktop_web&amp;rcm=ACoAAD2Ay2ABR12If9kNfiVhgXd3EyIHiloIowQ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full border border-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_30px_rgba(0,194,255,0.45)] transition hover:shadow-[0_0_40px_rgba(0,194,255,0.6)] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/80">
+                                    &#x1F517; View Publication &rarr;
+                                </a>
+                                <p class="text-sm text-[#EAF6FF]/80">&#x2728; See how data became destiny.</p>
+                            </div>
+                            <button type="button" class="inline-flex items-center gap-2 text-xs font-medium text-cyan-200/80 underline decoration-dotted decoration-cyan-200/60 hover:text-cyan-100" title="Phone Usage, Study Habits, and Academic Performance: Predicting GPA with Machine Learning">
+                                Full academic title
+                                <span aria-hidden="true">&#9432;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects" class="bg-transparent py-12 px-6 lg:px-16">
+        <div class="text-center max-w-3xl mx-auto fade-up" data-animate>
+            <h2 class="text-4xl lg:text-5xl font-bold">
+                Featured <span class="text-blue-400">Projects</span>
+            </h2>
+        </div>
+    </section>
+
+    <!-- AI for Humanity -->
+    <section id="ai-for-humanity" class="bg-gradient-to-b from-[#0B0F19] to-black py-24 px-6 lg:px-16">
+        <div class="text-center max-w-3xl mx-auto fade-up" data-animate>
+            <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                AI for <span class="text-blue-400">Humanity</span>
+            </h2>
+            <p class="text-gray-400 text-lg">
+                Human-first AI platforms guiding people through healthcare, language, and life-changing decisions.
+            </p>
+        </div>
+
+        <div class="mt-16 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+            <article class="relative group fade-up" data-animate data-delay="80">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-400/25 via-cyan-300/20 to-blue-500/30 opacity-0 blur-xl transition duration-500 group-hover:opacity-100"></div>
+                <div class="relative h-full rounded-2xl border border-emerald-300/25 bg-[#0B1F2E]/55 p-6 backdrop-blur-md transition duration-500 group-hover:border-emerald-300/70 group-hover:shadow-[0_0_32px_#24F5C066]">
+                    <div class="overflow-hidden rounded-xl mb-5">
+                        <div class="relative h-52 w-full bg-gradient-to-br from-emerald-900/45 via-teal-900/40 to-blue-900/40">
+                            <img loading="lazy" decoding="async" src="Images/Gemini_Generated_Image_7w5a477w5a477w5a%20(3).png" alt="Dalili Al-Dawaa (Your Medicine Guide)" class="h-full w-full object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-95" onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center'); this.parentElement.innerHTML='<i class=&quot;fas fa-hand-holding-medical text-4xl text-emerald-200&quot;></i>';">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">&#x062F;&#x0644;&#x064A;&#x0644;&#x064A; &#x0627;&#x0644;&#x062F;&#x0648;&#x0627;&#x0621; &middot; Dalili Al-Dawaa (Your Medicine Guide)</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                        Built during Code for Sudan&mdash;connects patients, pharmacists, and responders for rapid medication guidance when infrastructure is strained.
+                    </p>
+                    <ul class="space-y-3 text-left text-sm text-cyan-100/80 mb-6">
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Crisis-ready triage, role-based dashboards, and SMS support for vulnerable communities.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Guides pharmacy stock decisions with realtime availability and safety alerts.</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mb-6 text-xs uppercase tracking-wider text-cyan-200/90">
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">React</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Node.js</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Supabase</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Firebase</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">TailwindCSS</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">OpenAI API</span>
+                    </div>
+                    <a href="https://sudannnnn.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-400 to-cyan-400 px-4 py-2 rounded-lg font-semibold text-sm text-white hover:shadow-lg transition">
+                        Impact Story
+                        <i class="fas fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="relative group fade-up" data-animate data-delay="140">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/35 via-purple-400/20 to-cyan-400/30 opacity-0 blur-xl transition duration-500 group-hover:opacity-100"></div>
+                <div class="relative h-full rounded-2xl border border-blue-500/20 bg-[#0D1D33]/55 p-6 backdrop-blur-md transition duration-500 group-hover:border-blue-400/70 group-hover:shadow-[0_0_32px_#6D8CFF66]">
+                    <div class="overflow-hidden rounded-xl mb-5 shadow-[0_24px_55px_rgba(54,101,255,0.35)]">
+                        <div class="relative h-52 w-full">
+                            <img loading="lazy" decoding="async" src="Images/Gemini_Generated_Image_4w4m0c4w4m0c4w4m.png" alt="Say Simple multilingual assistant preview" class="h-full w-full object-cover transition duration-700 group-hover:scale-110 group-hover:opacity-90" onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center','bg-gradient-to-br','from-[#0B1430]','via-[#14245E]','to-[#1F337C]'); this.parentElement.innerHTML='<i class=&quot;fas fa-language text-4xl text-blue-200&quot;></i>';">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-[#050E27]/65 via-transparent to-[#6B7CFF]/35 mix-blend-screen" aria-hidden="true"></div>
+                            <div class="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full border border-blue-300/50 bg-blue-500/20 px-4 py-1.5 text-[0.55rem] uppercase tracking-[0.4em] text-blue-100/85 shadow-[0_0_18px_rgba(102,178,255,0.55)]">
+                                <span aria-hidden="true">&#x1F4AC;</span>
+                                <span>Real-time Translations</span>
+                            </div>
+                            <div class="absolute bottom-3 right-3 inline-flex items-center gap-2 rounded-full border border-cyan-300/40 bg-cyan-400/15 px-3 py-1 text-[0.55rem] uppercase tracking-[0.35em] text-cyan-100/85">
+                                <span aria-hidden="true">&#x2728;</span>
+                                <span>Gemini + Speech</span>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Say Simple</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                        Breaks language barriers by simplifying complex contextes from any language and bridging 22 Arabic accents &mdash;Google AI Solutions Hackathon 2024 finalist.
+                    </p>
+                    <ul class="space-y-3 text-left text-sm text-cyan-100/80 mb-6">
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Gemini-powered interpreter tuned for intent, nuance, and cultural context.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Voice-ready interface that harmonises diaspora speech patterns for accessible learning.</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mb-6 text-xs uppercase tracking-wider text-cyan-200/90">
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Google Cloud AI</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Gemini API</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">TailwindCSS</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">TailwindCSS</span>
+                    </div>
+                    <a href="https://gemini-simplify-4lcs.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-400 px-4 py-2 rounded-lg font-semibold text-sm text-white hover:shadow-lg transition">
+                        Launch Demo
+                        <i class="fas fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="relative group fade-up" data-animate data-delay="200">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/40 via-cyan-400/25 to-blue-500/35 opacity-0 blur-xl transition duration-500 group-hover:opacity-100"></div>
+                <div class="relative h-full rounded-2xl border border-blue-500/20 bg-[#0D1A33]/60 p-6 backdrop-blur-md transition duration-500 group-hover:border-cyan-400/70 group-hover:shadow-[0_0_32px_#00C6FF66]">
+                    <div class="overflow-hidden rounded-xl mb-5">
+                        <div class="relative h-52 w-full">
+                            <img loading="lazy" decoding="async" src="Images/Gemini_Generated_Image_b8u26mb8u26mb8u2%20(1).png" alt="Education Compass interface" class="h-full w-full object-cover object-center transition duration-700 group-hover:scale-105 group-hover:opacity-95" onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center','bg-gradient-to-br','from-[#071022]','via-[#0E1F3F]','to-[#112A56]'); this.parentElement.innerHTML='<div class=&quot;text-center px-6&quot;><p class=&quot;text-sm uppercase tracking-[0.4em] text-cyan-200/80 mb-3&quot;>Education Compass</p><p class=&quot;text-base text-cyan-100 leading-relaxed&quot;>Your Guide to Malaysia &middot; &#x062F;&#x0644;&#x064A;&#x0644;&#x0643; &#x0625;&#x0644;&#x0649; &#x0645;&#x0627;&#x0644;&#x064A;&#x0632;&#x064A;&#x0627;</p></div>'; ">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-[#050A18]/45 via-[#05142C]/30 to-transparent pointer-events-none"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Education Compass</h3>
+                    <p class="text-cyan-200 uppercase tracking-[0.3em] text-xs mb-4">Your Guide to Malaysia &middot; &#x062F;&#x0644;&#x064A;&#x0644;&#x0643; &#x0625;&#x0644;&#x0649; &#x0645;&#x0627;&#x0644;&#x064A;&#x0632;&#x064A;&#x0627;</p>
+                    <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                        AI-powered adviser for Arabic-speaking students selecting Malaysian universities based on budget, major, and city fit.
+                    </p>
+                    <ul class="space-y-3 text-left text-sm text-cyan-100/80 mb-6">
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Bilingual ChatGPT experience anchored in Arabic-first tone with English support.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Smart matching merges tuition, scholarships, and real cost-of-living indicators.</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mb-6 text-xs uppercase tracking-wider text-cyan-200/90">
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Next.js</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">OpenAI API</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Next.js</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Firebase</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">TailwindCSS</span>
+                    </div>
+                    <a href="https://studyeasy-3dek.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-400 px-4 py-2 rounded-lg font-semibold text-sm text-white hover:shadow-lg transition">
+                        Launch StudyEasy Guide
+                        <i class="fas fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- AI for Education & Research -->
+    <section id="ai-for-education" class="bg-gradient-to-b from-black via-[#050912] to-[#0B0F19] py-24 px-6 lg:px-16">
+        <div class="text-center max-w-3xl mx-auto fade-up" data-animate>
+            <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                AI for <span class="text-blue-400">Education &amp; Research</span>
+            </h2>
+            <p class="text-gray-400 text-lg">
+                Opening doors to scholarships, data-driven learning, and globally recognised research.
+            </p>
+        </div>
+
+        <div class="mt-16 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+            <article class="relative group fade-up" data-animate data-delay="80">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/30 via-purple-400/20 to-cyan-400/30 opacity-0 blur-xl transition duration-500 group-hover:opacity-100"></div>
+                <div class="relative h-full rounded-2xl border border-blue-500/20 bg-[#0E1B3C]/50 p-6 backdrop-blur-md transition duration-500 group-hover:border-blue-400/70 group-hover:shadow-[0_0_30px_#756BFF55]">
+                    <div class="overflow-hidden rounded-xl mb-5 shadow-[0_20px_45px_rgba(90,120,255,0.25)]">
+                        <div class="relative h-52 w-full">
+                            <img loading="lazy" decoding="async" src="Images/Gemini_Generated_Image_7w5a477w5a477w5a%20(2).png" alt="Vibrant cosmic data streams illustrating the ScholarAI opportunity navigator" class="h-full w-full object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-95" onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center'); this.parentElement.innerHTML='<i class=&quot;fas fa-graduation-cap text-4xl text-purple-300&quot;></i>';">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-[#050C2B]/70 via-transparent to-[#6D5CFF]/35 mix-blend-screen" aria-hidden="true"></div>
+                            <div class="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full border border-indigo-300/50 bg-indigo-500/20 px-4 py-1.5 text-[0.6rem] uppercase tracking-[0.35em] text-indigo-100/85 shadow-[0_0_22px_rgba(120,122,255,0.45)]">
+                                <span aria-hidden="true">&#x2728;</span>
+                                <span>Scholarship Intel</span>
+                            </div>
+                            <div class="absolute bottom-3 right-3 rounded-full border border-cyan-200/40 bg-cyan-400/15 px-3 py-1 text-[0.55rem] uppercase tracking-[0.4em] text-cyan-100/80">
+                                Gemini Inside
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">ScholarAI Opportunity Navigator</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                        AI-driven platform that surfaces the right scholarships by reading your CV, evaluating eligibility, and highlighting the fastest wins first.
+                    </p>
+                    <ul class="space-y-3 text-left text-sm text-cyan-100/80 mb-6">
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Uploads CVs or intake answers, then builds a personalised profile with academic strengths and financial needs.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Ranks opportunities by fit, deadlines, and documentation load with conversational guidance throughout.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Exports trackable action plans so applicants never miss a requirement or deadline.</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mb-6 text-xs uppercase tracking-wider text-cyan-200/90">
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Gemini API</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Next.js</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">TailwindCSS</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Supabase</span>
+                    </div>
+                    <a href="https://scholar-ai-liart.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-400 px-4 py-2 rounded-lg font-semibold text-sm text-white hover:shadow-lg transition">
+                        Launch ScholarAI
+                        <i class="fas fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+            <article class="relative group fade-up" data-animate data-delay="120">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/30 via-sky-400/20 to-cyan-400/25 opacity-0 blur-xl transition duration-500 group-hover:opacity-100"></div>
+                <div class="relative h-full rounded-2xl border border-blue-500/20 bg-[#0C1A2D]/50 p-6 backdrop-blur-md transition duration-500 group-hover:border-cyan-300/70 group-hover:shadow-[0_0_30px_#00C6FF55]">
+                    <div class="overflow-hidden rounded-xl mb-5">
+                        <div class="relative h-52 w-full bg-gradient-to-br from-sky-900/40 to-blue-900/35">
+                            <img loading="lazy" decoding="async" src="Images/Gemini_Generated_Image_7w5a477w5a477w5a%20(1).png" alt="MaiKedah Tourism Planner interface" class="h-full w-full object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-95" onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center'); this.parentElement.innerHTML='<i class=&quot;fas fa-route text-4xl text-sky-200&quot;></i>';">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">MaiKedah Tourism Planner</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                        Generates personalised, day-by-day itineraries for Malaysian cities, blending culture, cuisine, and logistics.
+                    </p>
+                    <ul class="space-y-3 text-left text-sm text-cyan-100/80 mb-6">
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Gemini-sourced recommendations with live weather, transit, and pricing context.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Exports shareable itineraries for families, tour operators, and remote workers.</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mb-6 text-xs uppercase tracking-wider text-cyan-200/90">
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Gemini API</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Firebase</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">TailwindCSS</span>
+                    </div>
+                    <a href="https://m-yscholar-main.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-400 px-4 py-2 rounded-lg font-semibold text-sm text-white hover:shadow-lg transition">
+                        Preview Coming Soon
+                        <i class="fas fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+            <article class="relative group fade-up" data-animate data-delay="160">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/25 via-blue-500/20 to-cyan-400/25 opacity-0 blur-xl transition duration-500 group-hover:opacity-100"></div>
+                <div class="relative h-full rounded-2xl border border-purple-400/20 bg-[#0D1633]/55 p-6 backdrop-blur-md transition duration-500 group-hover:border-purple-300/70 group-hover:shadow-[0_0_32px_#9D6DFF55]">
+                    <div class="overflow-hidden rounded-xl mb-5">
+                        <div class="relative h-52 w-full bg-gradient-to-br from-purple-900/45 to-blue-900/40">
+                            <img loading="lazy" decoding="async" src="Images/Gemini_Generated_Image_kc6dhhkc6dhhkc6d.png" alt="AI Content Creator workspace mockup" class="h-full w-full object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-95" onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center'); this.parentElement.innerHTML='<i class=&quot;fas fa-pen-nib text-4xl text-purple-200&quot;></i>';">
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">AI Content Creator</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                        Structured prompt framework for educators and media teams to spin up lessons, social threads, and explainer content instantly.
+                    </p>
+                    <ul class="space-y-3 text-left text-sm text-cyan-100/80 mb-6">
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Template library balancing tone, complexity, and local context for every audience.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Pipeline integrates review checkpoints so teams stay compliant and on-brand.</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mb-6 text-xs uppercase tracking-wider text-cyan-200/90">
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">OpenAI API</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">LangChain</span>
+                    </div>
+                    <a href="https://www.instagram.com/almonzer_hamid/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-400 px-4 py-2 rounded-lg font-semibold text-sm text-white hover:shadow-lg transition">
+                        View Insta Account
+                        <i class="fas fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+            <article class="relative group fade-up" data-animate data-delay="180">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-cyan-400/15 via-blue-500/10 to-emerald-400/15 opacity-0 blur-3xl transition duration-700 group-hover:opacity-100"></div>
+                <div class="relative h-full rounded-3xl border border-cyan-300/30 bg-[#081829]/75 p-6 backdrop-blur-2xl transition duration-700 group-hover:border-cyan-200/60 group-hover:shadow-[0_0_40px_rgba(0,198,255,0.45)]">
+                    <div class="relative overflow-hidden rounded-2xl mb-6">
+                        <div class="relative h-52 w-full">
+                            <img loading="lazy" decoding="async" src="Images/Gemini_Generated_Image_yg7hmyg7hmyg7hmy.png" alt="" class="h-full w-full object-cover object-center blur-3xl scale-110 opacity-55 transition duration-700 group-hover:opacity-70 group-hover:blur-[22px]">
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#031020]/95 via-[#061C34]/85 to-[#0A2644]/75 mix-blend-screen"></div>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 text-cyan-100/75">
+                                <i class="fas fa-lock text-3xl drop-shadow-[0_0_18px_rgba(0,198,255,0.45)]" aria-hidden="true"></i>
+                                <span class="text-[0.7rem] uppercase tracking-[0.55em]">Locked Preview</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative flex flex-col items-center text-center space-y-4">
+                        <h3 class="text-3xl font-semibold text-white drop-shadow-[0_0_22px_rgba(0,198,255,0.35)]">UltraFolio</h3>
+                        <div class="flex items-center gap-2 text-cyan-100/75 text-xs uppercase tracking-[0.45em]" aria-hidden="true">
+                            <i class="fas fa-lock text-sm"></i>
+                            <span>Stay Tuned</span>
+                            <span>&middot;</span>
+                            <span>Coming Soon</span>
+                        </div>
+                        <span class="sr-only">UltraFolio is locked. Stay tuned for the upcoming launch.</span>
+                    </div>
+                </div>
+            </article>
+            <article class="relative group fade-up" data-animate data-delay="190">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500/25 via-rose-500/20 to-cyan-400/25 opacity-0 blur-xl transition duration-500 group-hover:opacity-100"></div>
+                <div class="relative h-full rounded-2xl border border-orange-400/20 bg-[#1B1328]/55 p-6 backdrop-blur-md transition duration-500 group-hover:border-cyan-300/60 group-hover:shadow-[0_0_36px_#FF7B6E55] overflow-hidden">
+                    <div class="overflow-hidden rounded-xl mb-5">
+                        <div class="relative h-52 w-full">
+                            <img loading="lazy" decoding="async" src="Images/Gemini_Generated_Image_sh59arsh59arsh59.png" alt="&#x0645;&#x0646;&#x0635;&#x0629; &#x0627;&#x0644;&#x062D;&#x0631;&#x0641;&#x064A;&#x064A;&#x0646; &#x0627;&#x0644;&#x0630;&#x0643;&#x064A;&#x0629; (Smart Skilled Services Platform)" class="h-full w-full object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-95" onerror="this.style.display='none'; this.parentElement.classList.add('flex','items-center','justify-center','bg-gradient-to-br','from-[#2D0F31]/70','via-[#12213F]/65','to-[#083448]/60'); this.parentElement.innerHTML='<div class=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.25),transparent_55%),radial-gradient(circle_at_80%_65%,rgba(251,146,60,0.2),transparent_60%)] opacity-70 animate-pulse&quot;></div><i class=&quot;fas fa-people-carry-box text-4xl text-cyan-200 relative&quot;></i>'; ">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-[#0B0A17]/80 via-[#1B1328]/55 to-transparent"></div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.35em] text-cyan-200/70 mb-3">
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Hackathon Sprint</span>
+                        <span class="rounded-full border border-orange-400/30 bg-orange-400/10 px-3 py-1">6 Days &middot; 5 Innovators</span>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white leading-snug mb-2">&#x0645;&#x0646;&#x0635;&#x0629; &#x0627;&#x0644;&#x062D;&#x0631;&#x0641;&#x064A;&#x064A;&#x0646; &#x0627;&#x0644;&#x0630;&#x0643;&#x064A;&#x0629; &middot; Smart Skilled Services Platform</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                        Built in just six days at one of the Arab world&apos;s most dynamic hackathons&mdash;an AI-powered marketplace that diagnoses household issues, drafts project briefs, and connects customers with vetted artisans.
+                    </p>
+                    <ul class="space-y-3 text-left text-sm text-cyan-100/80 mb-6">
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Conversational AI triages requests, offering instant how-to guidance when a DIY fix exists.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Auto-generates project scopes and smartly routes work to skilled professionals when hands-on support is needed.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Transparent bidding engine empowers customers to compare offers and choose the right expert.</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mb-6 text-xs uppercase tracking-wider text-cyan-200/90">
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Flutter</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Flask</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Firebase</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">AI Chatbot</span>
+                    </div>
+                    <a href="https://www.linkedin.com/posts/almonzer-hamid-aa8693249_ai-hackathon-flutter-activity-7308757792515899393-MzyS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD2Ay2ABR12If9kNfiVhgXd3EyIHiloIowQ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-cyan-400 px-4 py-2 rounded-lg font-semibold text-sm text-white hover:shadow-lg transition">
+                        Read Hackathon Story
+                        <i class="fas fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+            <article class="relative group fade-up" data-animate data-delay="200">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-400/25 via-cyan-400/20 to-blue-500/30 opacity-0 blur-xl transition duration-500 group-hover:opacity-100"></div>
+                <div class="relative h-full rounded-2xl border border-green-300/20 bg-[#0B1E2C]/55 p-6 backdrop-blur-md transition duration-500 group-hover:border-green-300/70 group-hover:shadow-[0_0_30px_#00FFAA55] overflow-hidden">
+                    <div class="overflow-hidden rounded-xl mb-5 shadow-[0_18px_40px_rgba(0,255,170,0.22)]">
+                        <div class="relative h-52 w-full">
+                            <img loading="lazy" decoding="async" src="Images/Gemini_Generated_Image_10al0810al0810al.png" alt="Flowing neon circuit artwork representing n8n automation excellence" class="h-full w-full object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-95">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-[#032423]/75 via-transparent to-[#0AF2AE]/25 mix-blend-screen" aria-hidden="true"></div>
+                            <div class="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full border border-emerald-300/40 bg-emerald-400/20 px-4 py-1.5 text-[0.6rem] uppercase tracking-[0.35em] text-emerald-100/85 shadow-[0_0_22px_rgba(0,255,170,0.35)]">
+                                <span aria-hidden="true">&#9889;</span>
+                                <span>Automation Lab</span>
+                            </div>
+                            <div class="absolute bottom-3 right-3 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-[0.55rem] uppercase tracking-[0.4em] text-white/80">
+                                n8n x AI
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">n8n Automation Framework</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                        Custom workflow engine that braids n8n, OpenAI, and Google Cloud into reusable automations for research and ops teams.
+                    </p>
+                    <ul class="space-y-3 text-left text-sm text-cyan-100/80 mb-6">
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Modular nodes orchestrate data ingestion, cleanup, and human approval loops.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-cyan-300">&bull;</span>
+                            <span>Reduces manual workload across reporting, content, and research synthesis.</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mb-6 text-xs uppercase tracking-wider text-cyan-200/90">
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">n8n</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">Google Cloud</span>
+                        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1">OpenAI API</span>
+                    </div>
+                    <a href="https://m-yscholar-main.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-400 px-4 py-2 rounded-lg font-semibold text-sm text-white hover:shadow-lg transition">
+                        Automation Demo
+                        <i class="fas fa-arrow-up-right-from-square text-sm" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+            <article class="relative group fade-up" data-animate data-delay="240">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600/35 via-sky-500/25 to-cyan-400/30 opacity-0 blur-xl transition duration-500 group-hover:opacity-100"></div>
+                <div class="relative h-full rounded-2xl border border-blue-400/30 bg-gradient-to-br from-[#061227] via-[#0A1C36] to-[#04101F] p-6 backdrop-blur-md transition duration-500 group-hover:border-cyan-300/60 group-hover:shadow-[0_0_36px_#32D3FF55] overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 600 400%22%3E%3Cpath d=%22M590 140c-70-80-130-80-200-20s-180 20-220-80-110-60-150 0-80 70-20 150 100 70 190 60 160 90 240 110 140-30 160-110-40-120-100-110z%22 fill=%22rgba(32,77,128,0.28)%22/%3E%3C/svg%3E')] opacity-50 pointer-events-none"></div>
+                    <div class="relative flex items-center justify-center">
+                        <span class="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-400/20 px-5 py-2 text-xs uppercase tracking-[0.35em] text-cyan-100/90 shadow-[0_0_20px_rgba(0,198,255,0.35)]">
+                            Certified Participant
+                        </span>
+                    </div>
+                    <div class="relative mt-6 text-center space-y-4">
+                        <h3 class="text-2xl font-semibold text-white">Global AI &amp; Smart Tech Events Participation</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mx-auto max-w-xl">
+                            Participated in high-profile Malaysian AI and technology events, earning certifications and collaborating with global developer communities.
+                        </p>
+                    </div>
+                    <div class="relative mt-8 space-y-5 text-center">
+                        <div class="mx-auto max-w-lg rounded-2xl border border-cyan-400/25 bg-white/5 px-5 py-4">
+                            <p class="text-sm text-cyan-200 uppercase tracking-[0.25em] mb-2">Penang &middot; Google Developers</p>
+                            <p class="text-gray-200 text-sm leading-relaxed">
+                                Build with AI @ USM - collaborated with GDEs on Gemini integrations and earned active participant certification.
+                            </p>
+                        </div>
+                        <div class="mx-auto max-w-lg rounded-2xl border border-cyan-400/25 bg-white/5 px-5 py-4">
+                            <p class="text-sm text-cyan-200 uppercase tracking-[0.25em] mb-2">George Town &middot; Google Technology Showcase</p>
+                            <p class="text-gray-200 text-sm leading-relaxed">
+                                Introduced cutting-edge Google technologies to the Penang developer community, highlighting hands-on Gemini demos and collaboration opportunities.
+                            </p>
+                        </div>
+                        <div class="mx-auto max-w-lg rounded-2xl border border-cyan-400/25 bg-white/5 px-5 py-4">
+                            <p class="text-sm text-cyan-200 uppercase tracking-[0.25em] mb-2">Kuala Lumpur &middot; Smart City Convention</p>
+                            <p class="text-gray-200 text-sm leading-relaxed">
+                                Selangor Smart City &amp; Digital Economy Convention - pitched AI concepts and networked with regional tech innovators.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative mt-8 text-center">
+                        <p class="text-xs uppercase tracking-[0.35em] text-cyan-100/70">
+                            Catalysing real-world AI ecosystems &middot; Expanding global best practices
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="relative group fade-up" data-animate data-delay="280">
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500/30 via-blue-500/25 to-cyan-400/25 opacity-0 blur-xl transition duration-500 group-hover:opacity-100"></div>
+                <div class="relative h-full rounded-2xl border border-blue-400/25 bg-[#071226]/60 p-6 backdrop-blur-md transition duration-500 group-hover:border-cyan-300/60 group-hover:shadow-[0_0_36px_#33CFFF55] neural-card">
+                    <span class="neural-node" style="top:12%;left:28%;animation-delay:0s;"></span>
+                    <span class="neural-node" style="top:32%;left:68%;animation-delay:1.3s;"></span>
+                    <span class="neural-node" style="top:68%;left:42%;animation-delay:2.6s;"></span>
+                    <div class="relative flex items-center justify-between">
+                        <span class="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/15 px-4 py-1 text-xs uppercase tracking-[0.35em] text-cyan-100/90">
+                            Community Impact
+                        </span>
+                        <span class="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-400/10 px-3 py-1 text-[10px] uppercase tracking-[0.4em] text-blue-100/80">
+                            IndabaX
+                        </span>
+                    </div>
+                    <div class="relative mt-6 space-y-4">
+                        <h3 class="text-2xl font-semibold text-white leading-snug">IndabaX Sudan 2025 &ndash; Building Sudan&apos;s AI Future</h3>
+                        <p class="text-xs uppercase tracking-[0.35em] text-cyan-200/70">Organizer | October 2025</p>
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            Empowering the next wave of Sudanese ML talent through localised Deep Learning Indaba programming, mentorship, and hands-on community collaboration.
+                        </p>
+                        <ul class="space-y-3 text-sm text-cyan-100/80">
+                            <li class="flex gap-2">
+                                <span class="text-cyan-300">&bull;</span>
+                                <span>Facilitated onboarding for new coordinators and guided collaborative planning sessions.</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-cyan-300">&bull;</span>
+                                <span>Coordinated communications with the national IndabaX team to streamline event flow.</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-cyan-300">&bull;</span>
+                                <span>Shaped a shared vision for an inclusive Sudanese ML ecosystem rooted in community learning.</span>
+                            </li>
+                        </ul>
+                        <div class="pt-4 border-t border-cyan-400/30 text-xs uppercase tracking-[0.3em] text-cyan-100/70">
+                            Nurturing connected ML communities &middot; Expanding access to global AI knowledge
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="mt-20 fade-up" data-animate data-delay="260">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h3 class="text-3xl font-semibold">Hackathon Highlights</h3>
+                <p class="text-gray-400">
+                    Rapid-fire innovation with global teams&mdash;shipping real AI demos under intense deadlines.
+                </p>
+            </div>
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <article class="hackathon-badge relative rounded-2xl border border-cyan-400/15 bg-[#0C172C]/60 p-6 backdrop-blur">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-xl font-semibold text-white">Google AI Solutions Hackathon</h4>
+                        <span class="text-xs uppercase tracking-[0.3em] text-cyan-200/70 border border-cyan-300/20 rounded-full px-3 py-1">2025</span>
+                    </div>
+                    <p class="text-sm text-blue-200 mb-3">Google Developers</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Built SaySymbol&mdash;a Gemini-powered accent interpreter that elevates understanding over literal translation.
+                    </p>
+                </article>
+                <article class="hackathon-badge relative rounded-2xl border border-cyan-400/15 bg-[#0C172C]/60 p-6 backdrop-blur">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-xl font-semibold text-white">Arab World Hackathon</h4>
+                        <span class="text-xs uppercase tracking-[0.3em] text-cyan-200/70 border border-cyan-300/20 rounded-full px-3 py-1">2024</span>
+                    </div>
+                    <p class="text-sm text-blue-200 mb-3">Regional Innovators</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Delivered &ldquo;&#x0645;&#x0646;&#x0635;&#x0629; &#x0627;&#x0644;&#x062D;&#x0631;&#x0641;&#x064A;&#x064A;&#x0646; &#x0627;&#x0644;&#x0630;&#x0643;&#x064A;&#x0629;&rdquo;&mdash;AI diagnostics, smart project briefs, and artisan bidding launched in six intense days.
+                    </p>
+                    <a href="https://www.linkedin.com/posts/almonzer-hamid-aa8693249_ai-hackathon-flutter-activity-7308757792515899393-MzyS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD2Ay2ABR12If9kNfiVhgXd3EyIHiloIowQ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mt-4 text-xs uppercase tracking-[0.25em] text-cyan-200 hover:text-cyan-100 transition">
+                        Read recap
+                        <i class="fas fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+                    </a>
+                </article>
+                <article class="hackathon-badge relative rounded-2xl border border-cyan-400/15 bg-[#0C172C]/60 p-6 backdrop-blur">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-xl font-semibold text-white">Bolt 1 Million Global Hackathon</h4>
+                        <span class="text-xs uppercase tracking-[0.3em] text-cyan-200/70 border border-cyan-300/20 rounded-full px-3 py-1">2024</span>
+                    </div>
+                    <p class="text-sm text-blue-200 mb-3">Bolt.AI</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Delivered AI prototypes alongside a million-developer community competing for the top innovation challenge.
+                    </p>
+                </article>
+                <article class="hackathon-badge relative rounded-2xl border border-cyan-400/15 bg-[#0C172C]/60 p-6 backdrop-blur">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-xl font-semibold text-white">Code for Sudan Hackathon</h4>
+                        <span class="text-xs uppercase tracking-[0.3em] text-cyan-200/70 border border-cyan-300/20 rounded-full px-3 py-1">2025</span>
+                    </div>
+                    <p class="text-sm text-blue-200 mb-3">Code for Sudan &amp; Partners</p>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Launched Dalili Al-Dawaa&mdash;connecting patients and pharmacists with life-saving medication data during crisis.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Research Timeline -->
+    <section id="journey" class="bg-gradient-to-b from-black via-[#080B16] to-[#03040A] py-24 px-6 lg:px-16">
+        <div class="text-center max-w-3xl mx-auto fade-up" data-animate>
+            <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                My <span class="text-blue-400">Journey</span>
+            </h2>
+            <p class="text-gray-400 text-lg">
+                A timeline of leadership, research, and impact&mdash;connecting academic excellence with hands-on AI innovation.
+            </p>
+        </div>
+
+        <div class="relative mt-16 max-w-4xl mx-auto">
+            <div class="absolute left-4 top-0 bottom-0 hidden md:block w-px bg-gradient-to-b from-blue-500/20 via-blue-500/60 to-cyan-400/20"></div>
+            <div class="space-y-12 md:space-y-0 md:grid md:grid-cols-2 md:gap-12">
+                <article class="relative pl-10 md:pl-0 fade-up" data-animate data-delay="50">
+                    <span class="absolute left-2 top-2 hidden md:block w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_15px_#00C6FF]"></span>
+                    <div class="rounded-2xl border border-blue-500/20 bg-white/5 p-6 backdrop-blur">
+                        <p class="text-sm uppercase tracking-[0.3em] text-cyan-200/80 mb-3">2023 &mdash; Present</p>
+                        <h3 class="text-2xl font-semibold mb-2">Head of Academic Affairs</h3>
+                        <p class="text-blue-300 text-sm mb-3">Sudanese Association</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Led AI literacy initiatives and technical workshops that empowered students to connect education with real-world innovation.
+                        </p>
+                        <p class="text-gray-500 text-sm mt-3">Impact: Enabled 50+ learners to prototype AI solutions for community challenges.</p>
+                    </div>
+                </article>
+
+                <article class="relative pl-10 md:pl-0 fade-up" data-animate data-delay="100">
+                    <span class="absolute left-2 top-2 hidden md:block w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_15px_#00C6FF]"></span>
+                    <div class="rounded-2xl border border-blue-500/20 bg-white/5 p-6 backdrop-blur">
+                        <p class="text-sm uppercase tracking-[0.3em] text-cyan-200/80 mb-3">2024 &mdash; Present</p>
+                        <h3 class="text-2xl font-semibold mb-2">AI Product Developer</h3>
+                        <p class="text-blue-300 text-sm mb-3">Independent</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Designed and deployed AI web apps that automate research, content workflows, and decision support for partners across the region.
+                        </p>
+                        <p class="text-gray-500 text-sm mt-3">Impact: Delivered 5+ intelligent tools with measurable adoption and business outcomes.</p>
+                    </div>
+                </article>
+
+                <article class="relative pl-10 md:pl-0 fade-up" data-animate data-delay="150">
+                    <span class="absolute left-2 top-2 hidden md:block w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_15px_#00C6FF]"></span>
+                    <div class="rounded-2xl border border-blue-500/20 bg-white/5 p-6 backdrop-blur">
+                        <p class="text-sm uppercase tracking-[0.3em] text-cyan-200/80 mb-3">2024</p>
+                        <h3 class="text-2xl font-semibold mb-2">Scopus-indexed Publication</h3>
+                        <p class="text-blue-300 text-sm mb-3">AI in Education Research</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Published peer-reviewed research examining how AI augments blended learning experiences in resource-constrained environments.
+                        </p>
+                        <p class="text-gray-500 text-sm mt-3">Impact: Advanced regional academic discourse on ethical and practical AI adoption.</p>
+                    </div>
+                </article>
+
+                <article class="relative pl-10 md:pl-0 fade-up" data-animate data-delay="200">
+                    <span class="absolute left-2 top-2 hidden md:block w-3 h-3 rounded-full bg-cyan-400 shadow-[0_0_15px_#00C6FF]"></span>
+                    <div class="rounded-2xl border border-blue-500/20 bg-white/5 p-6 backdrop-blur">
+                        <p class="text-sm uppercase tracking-[0.3em] text-cyan-200/80 mb-3">2024 &mdash; 2025</p>
+                        <h3 class="text-2xl font-semibold mb-2">Certifications & Credentials</h3>
+                        <p class="text-blue-300 text-sm mb-3">Google Cloud &middot; OpenAI</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Earned Google Cloud credentials and completed the OpenAI Prompt Engineering course to stay ahead of evolving AI tooling.
+                        </p>
+                        <p class="text-gray-500 text-sm mt-3">Impact: Validated enterprise-grade infrastructure and advanced prompting expertise.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive AI Layer -->
+    <section id="ai-layer" class="py-24 px-6 lg:px-16 text-center bg-gradient-to-b from-[#03040A] via-[#050912] to-[#0B0F19]">
+        <div class="max-w-3xl mx-auto space-y-8 fade-up" data-animate>
+            <h2 class="text-4xl lg:text-5xl font-bold">
+                <span class="text-blue-400">Ask Almonzer</span> AI
+            </h2>
+            <p class="text-gray-400 text-lg">
+                Have questions about my projects, experience, or AI perspective? Tap into a curated AI assistant trained on my work.
+            </p>
+            <div class="relative rounded-3xl border border-blue-500/20 bg-[#0E1B3C]/40 p-10 backdrop-blur">
+                <div class="absolute inset-0 rounded-3xl border border-blue-400/40 opacity-0 transition duration-500 hover:opacity-100 pointer-events-none"></div>
+                <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-3xl text-white shadow-[0_0_25px_#00C6FF66]">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <p class="text-gray-300 text-base leading-relaxed mb-8">
+                    "I am a conversational layer over Almonzer's portfolio. Ask about his stack, collaborations, or the story behind each build and I'll guide you."
+                </p>
+                <button type="button" data-chat-toggle class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-3 rounded-full font-semibold text-white hover:shadow-[0_0_30px_#00C6FF55] transition">
+                    <i class="fas fa-comments text-sm"></i>
+                    Open Chat
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-gradient-to-b from-[#000814] via-[#00122B] to-[#001F3F] text-white py-24 px-6 lg:px-16">
+        <div class="max-w-6xl mx-auto grid gap-12 lg:grid-cols-[1.6fr_1fr] items-start">
+            <div class="fade-up" data-animate>
+                <span class="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1 text-xs uppercase tracking-[0.4em] text-cyan-200/80">Contact</span>
+                <h2 class="text-4xl lg:text-5xl font-bold mt-6">Let&apos;s Build Something Impactful Together</h2>
+                <p class="text-gray-300 text-lg mt-4">
+                    Have a project, idea, or collaboration in mind? Drop a quick message and I&apos;ll get back within 24 hours.
+                </p>
+                <p class="text-gray-300/80 text-base mt-3">
+                    Based in Alor Setar (Malaysia) and connected globally. Ready to build, learn, collaborate, and research on innovative AI projects. Send me a quick message &mdash; I&apos;ll get back within 24 hours.
+                </p>
+                <form id="contactForm" class="mt-10 space-y-5">
+                    <div id="contactToast" class="hidden opacity-0 focus:opacity-100 rounded-xl border border-cyan-400/40 bg-cyan-400/10 px-4 py-3 text-sm text-cyan-100 shadow-[0_0_25px_rgba(0,198,255,0.25)] transition duration-300">
+                        <span class="font-semibold text-white">Message sent successfully!</span> I&apos;ll reply shortly.
+                    </div>
+                    <div class="grid gap-5 sm:grid-cols-2">
+                        <label class="flex flex-col gap-2 text-sm">
+                            <span class="uppercase tracking-[0.3em] text-cyan-200/70">Name</span>
+                            <input type="text" name="name" required placeholder="Your full name" class="rounded-xl border border-blue-400/30 bg-[#0E1B3C]/40 px-4 py-3 text-white placeholder:text-gray-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400 transition">
+                        </label>
+                        <label class="flex flex-col gap-2 text-sm">
+                            <span class="uppercase tracking-[0.3em] text-cyan-200/70">Email</span>
+                            <input type="email" name="email" required placeholder="name@email.com" class="rounded-xl border border-blue-400/30 bg-[#0E1B3C]/40 px-4 py-3 text-white placeholder:text-gray-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400 transition">
+                        </label>
+                    </div>
+                    <label class="flex flex-col gap-2 text-sm">
+                        <span class="uppercase tracking-[0.3em] text-cyan-200/70">Subject</span>
+                        <input type="text" name="subject" required placeholder="How can I help?" class="rounded-xl border border-blue-400/30 bg-[#0E1B3C]/40 px-4 py-3 text-white placeholder:text-gray-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400 transition">
+                    </label>
+                    <label class="flex flex-col gap-2 text-sm">
+                        <span class="uppercase tracking-[0.3em] text-cyan-200/70">Message</span>
+                        <textarea name="message" required rows="5" placeholder="Share details, timelines, or links I should review." class="rounded-xl border border-blue-400/30 bg-[#0E1B3C]/40 px-4 py-3 text-white placeholder:text-gray-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400 transition resize-none"></textarea>
+                    </label>
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <button type="submit" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-400 px-6 py-3 rounded-xl font-semibold text-white shadow-lg hover:shadow-[0_0_20px_#00C6FF] transition focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300/70 disabled:opacity-60 disabled:cursor-not-allowed">
+                            Send Message
+                            <i class="fas fa-arrow-right text-sm"></i>
+                        </button>
+                        <a href="tel:+601169791960" class="inline-flex items-center gap-2 rounded-xl border border-cyan-400/40 px-5 py-3 text-sm font-semibold text-cyan-200 hover:bg-cyan-400/10 transition">
+                            <i class="fas fa-phone text-sm"></i>
+                            Quick Call
+                        </a>
+                        <a href="https://wa.me/601169791960" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl border border-green-400/40 px-5 py-3 text-sm font-semibold text-green-200 hover:bg-green-400/10 transition">
+                            <i class="fab fa-whatsapp text-sm"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div class="fade-up" data-animate data-delay="150">
+                <div class="rounded-3xl border border-blue-400/20 bg-[#0E1B3C]/60 p-8 backdrop-blur-md shadow-[0_0_35px_rgba(0,198,255,0.2)] space-y-6">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-semibold text-white">Response &amp; Availability</h3>
+                        <span class="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-[10px] uppercase tracking-[0.4em] text-cyan-200/80">Avg. &lt;24h</span>
+                    </div>
+                    <ul class="space-y-4 text-sm text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <span class="text-cyan-300 text-lg"><i class="fas fa-bolt" aria-hidden="true"></i></span>
+                            <span>Replies in under 24 hours &middot; Available MYT 9am - 6pm.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-cyan-300 text-lg"><i class="fas fa-handshake" aria-hidden="true"></i></span>
+                            <span>Open to AI collaborations, workshops, keynotes, and founder coaching.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-cyan-300 text-lg"><i class="fas fa-location-dot" aria-hidden="true"></i></span>
+                            <span>Based in Alor Setar, Malaysia &ndash; partnering with teams worldwide.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-cyan-300 text-lg"><i class="fas fa-rocket" aria-hidden="true"></i></span>
+                            <span>Currently welcoming early-stage AI projects and strategic partnerships.</span>
+                        </li>
+                    </ul>
+                    <div class="pt-4 border-t border-blue-400/15">
+                        <p class="text-xs uppercase tracking-[0.35em] text-cyan-200/70 mb-3">Connect</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="http://linkedin.com/in/almonzer-hamid-aa8693249" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-white/5 px-4 py-2 text-sm text-cyan-100 hover:border-cyan-300/50 hover:bg-cyan-400/10 transition">
+                                <i class="fab fa-linkedin-in text-sm"></i>
+                                LinkedIn
+                            </a>
+                            <a href="https://github.com/almonzeir" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-white/5 px-4 py-2 text-sm text-cyan-100 hover:border-cyan-300/50 hover:bg-cyan-400/10 transition">
+                                <i class="fab fa-github text-sm"></i>
+                                GitHub
+                            </a>
+                            <a href="mailto:monzeer2002@gmail.com" class="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-white/5 px-4 py-2 text-sm text-cyan-100 hover:border-cyan-300/50 hover:bg-cyan-400/10 transition">
+                                <i class="fas fa-envelope text-sm"></i>
+                                Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Chat Button -->
+    <button type="button" data-chat-toggle class="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-[0_0_25px_#00C6FF80] transition">
+        Open Ask Almonzer Chat
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-[#05070F] border-t border-blue-500/20 py-12 px-6 lg:px-16">
+        <div class="max-w-6xl mx-auto space-y-10">
+            <div class="flex flex-col lg:flex-row justify-between gap-8 lg:items-center">
+                <div>
+                    <h3 class="text-2xl font-bold">Almonzer Hamid</h3>
+                    <p class="text-gray-400 mt-2">AI Innovator &middot; Tech Builder &middot; Educator</p>
+                </div>
+                <div class="flex gap-5 text-gray-400">
+                    <a href="http://linkedin.com/in/almonzer-hamid-aa8693249" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="https://github.com/almonzeir" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="mailto:monzeer2002@gmail.com" class="hover:text-blue-400 transition">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-blue-500/20 pt-8 text-center text-gray-500 space-y-3">
+                <p>Built with heart and AI craftsmanship by Almonzer Hamid Sarray.</p>
+                <p>Let&apos;s create the future together.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Modal -->
+    <div id="aiChatModal" class="hidden fixed bottom-24 right-6 z-50 w-96 rounded-2xl border border-blue-500/30 bg-black/85 p-5 backdrop-blur-md shadow-[0_0_30px_#00C6FF50]">
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-lg font-semibold text-blue-300">Ask Almonzer AI</h3>
+            <button type="button" id="closeChat" class="text-gray-400 hover:text-white transition">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="chatWindow" class="h-64 overflow-y-auto rounded-xl border border-blue-500/10 bg-[#0E1B3C]/40 p-3 text-gray-300 space-y-3">
+            <div class="inline-block rounded-lg bg-[#12234F]/70 p-3 text-sm">
+                Hello! I&apos;m Almonzer&apos;s AI assistant. How can I help you today?
+            </div>
+        </div>
+        <form id="chatForm" class="mt-4 flex gap-2">
+            <input type="text" id="userPrompt" class="flex-grow rounded-xl border border-blue-500/30 bg-[#0E1B3C]/50 px-3 py-2 text-sm text-white placeholder:text-gray-500 focus:border-cyan-400 focus:outline-none" placeholder="Ask me anything about Almonzer&apos;s work..." autocomplete="off">
+            <button type="submit" class="rounded-xl bg-gradient-to-r from-blue-500 to-cyan-400 px-4 py-2 text-sm font-semibold text-white hover:shadow-[0_0_20px_#00C6FF80] transition">
+                Send
+            </button>
+        </form>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/particles.js"></script>
+    <script>
+        const animatedBlocks = document.querySelectorAll('[data-animate]');
+        const heroSection = document.querySelector('[data-hero]');
+        const techName = heroSection?.querySelector('.tech-name');
+
+        const escapeHTML = (value) => {
+            if (typeof value !== 'string') {
+                return '';
+            }
+            return value
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        };
+        const offlineKnowledgeBase = [
+            {
+                keywords: ['hello', 'hi', 'hey', 'introduce'],
+                response: "Hey there! I'm Almonzer's AI assistant. Even offline I can walk you through his mission, signature projects, and ways to collaborate. Ask about publications, projects, or how to contact him."
+            },
+            {
+                keywords: ['project', 'build', 'portfolio'],
+                response: "Here are a few keystone builds:\n- Dalili Al-Dawaa - crisis-ready medication guidance for Sudan.\n- ScholarAI Opportunity Navigator - Gemini-powered scholarship matcher.\n- Say Simple - multilingual AI interpreter bridging 22 Arabic accents.\n- Education Compass - AI adviser for Malaysian universities. Ask about any project for deeper details!"
+            },
+            {
+                keywords: ['publication', 'paper', 'scopus', 'research'],
+                response: "Our Scopus-indexed paper \"Phone Usage, Study Habits, and Academic Performance\" earned the 2025 Global Impact distinction. It shows how mobile telemetry and study rhythms combine to guide equitable GPA support."
+            },
+            {
+                keywords: ['contact', 'email', 'reach'],
+                response: "You can reach me via email at monzeer2002@gmail.com or on LinkedIn at linkedin.com/in/almonzer-hamid-aa8693249. I typically reply within 24 hours."
+            },
+            {
+                keywords: ['skill', 'stack', 'tech', 'tools'],
+                response: "Key stacks: Python, JavaScript/TypeScript, React, Tailwind, Node, n8n, Gemini API, plus Google Cloud. Focus areas include AI product design, predictive analytics, and conversational UX."
+            },
+            {
+                keywords: ['collaborate', 'work together', 'partnership'],
+                response: "I love collaborating on AI products, predictive analytics, and human-impact automation. Share what you're building - timeline, goals, and audience - and I'll map how we can make it real."
+            }
+        ];
+        const offlineFallbackReply = (query = '') => {
+            const normalized = query.toLowerCase();
+            for (const entry of offlineKnowledgeBase) {
+                if (entry.keywords.some((keyword) => normalized.includes(keyword))) {
+                    return `${entry.response}\n\n? Offline mode: For tailored answers, restore API access when possible.`;
+                }
+            }
+            return "I'm currently in offline mode, so I can't reach Gemini. Ask about projects, publications, skills, or how to contact me and I'll share what I know. Once the API key is restored, I can answer with full context.";
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const delay = target.dataset.delay || 0;
+                    setTimeout(() => target.classList.add('is-visible'), delay);
+                    observer.unobserve(target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        animatedBlocks.forEach(block => {
+            if (!block.classList.contains('fade-up')) {
+                block.classList.add('fade-up');
+            }
+            observer.observe(block);
+        });
+
+        const contactForm = document.getElementById('contactForm');
+        const contactToast = document.getElementById('contactToast');
+        const contactSubmitButton = contactForm ? contactForm.querySelector('button[type="submit"]') : null;
+        const contactSubmitButtonHTML = contactSubmitButton ? contactSubmitButton.innerHTML : null;
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                if (contactSubmitButton) {
+                    contactSubmitButton.disabled = true;
+                    contactSubmitButton.classList.add('opacity-60');
+                    if (contactSubmitButtonHTML) {
+                        contactSubmitButton.innerHTML = 'Sending...';
+                    }
+                }
+
+                window.setTimeout(() => {
+                    contactForm.reset();
+
+                    if (contactToast) {
+                        contactToast.classList.remove('hidden');
+                        window.requestAnimationFrame(() => {
+                            contactToast.classList.remove('opacity-0');
+                            contactToast.classList.add('opacity-100');
+                        });
+
+                        window.setTimeout(() => {
+                            contactToast.classList.remove('opacity-100');
+                            contactToast.classList.add('opacity-0');
+                            window.setTimeout(() => contactToast.classList.add('hidden'), 300);
+                        }, 3200);
+                    }
+
+                    if (contactSubmitButton) {
+                        contactSubmitButton.disabled = false;
+                        contactSubmitButton.classList.remove('opacity-60');
+                        if (contactSubmitButtonHTML) {
+                            contactSubmitButton.innerHTML = contactSubmitButtonHTML;
+                        }
+                    }
+                }, 600);
+            });
+        }
+
+        const chatModal = document.getElementById('aiChatModal');
+        const chatWindow = document.getElementById('chatWindow');
+        const chatForm = document.getElementById('chatForm');
+        const userPrompt = document.getElementById('userPrompt');
+        const closeChatButton = document.getElementById('closeChat');
+        const chatToggles = document.querySelectorAll('[data-chat-toggle]');
+        const sendButton = chatForm?.querySelector('button[type="submit"]');
+        const conversationHistory = [
+            {
+                role: 'model',
+                text: "Hello! I'm Almonzer's AI assistant. How can I help you today?",
+            }
+        ];
+        const chatEndpointResolver = (() => {
+            if (typeof window === 'undefined') {
+                return {
+                    async resolve() {
+                        return '/api/chat';
+                    },
+                    getLastReport() {
+                        return { status: 'ok', endpoint: '/api/chat', geminiConfigured: true };
+                    },
+                };
+            }
+
+            const candidates = [];
+            const seen = new Set();
+            const addCandidate = (input) => {
+                if (!input || typeof input !== 'string') {
+                    return;
+                }
+                const normalized = input.trim().replace(/\/+$/, '');
+                if (!normalized || seen.has(normalized)) {
+                    return;
+                }
+                seen.add(normalized);
+                candidates.push(normalized);
+            };
+
+            const forcedUrl = typeof window.__CHAT_API_URL === 'string' ? window.__CHAT_API_URL.trim() : '';
+            if (forcedUrl) {
+                addCandidate(forcedUrl);
+            }
+
+            const datasetUrl = (typeof document !== 'undefined' && document.body && document.body.dataset)
+                ? document.body.dataset.chatEndpoint
+                : '';
+            if (typeof datasetUrl === 'string' && datasetUrl.trim()) {
+                addCandidate(datasetUrl);
+            }
+
+            const { protocol, hostname, port } = window.location;
+            const localHosts = new Set(['localhost', '127.0.0.1', '::1']);
+            const fallbackPorts = [8080, 8081, 8090, 3000, 3001];
+
+            if (protocol === 'file:' || !hostname) {
+                ['http://127.0.0.1', 'http://localhost'].forEach((origin) => {
+                    fallbackPorts.forEach((portOption) => addCandidate(`${origin}:${portOption}`));
+                });
+            } else if (localHosts.has(hostname)) {
+                const base = `${protocol}//${hostname}`;
+                const portSet = new Set(fallbackPorts);
+                const parsedPort = Number.parseInt(port, 10);
+                if (!Number.isNaN(parsedPort)) {
+                    portSet.add(parsedPort);
+                }
+                portSet.forEach((value) => addCandidate(`${base}:${value}`));
+                addCandidate(`${protocol}//${hostname}${port ? `:${port}` : ''}`);
+            } else {
+                addCandidate(`${protocol}//${hostname}${port ? `:${port}` : ''}`);
+            }
+
+            const { origin } = window.location;
+            if (origin && origin !== 'null') {
+                addCandidate(origin);
+            }
+
+            addCandidate('');
+
+            let cachedEndpoint = null;
+            let pendingPromise = null;
+            let lastHealthReport = { status: 'unknown', endpoint: '/api/chat' };
+
+            const tryResolve = async () => {
+                const errors = [];
+
+                for (const base of candidates) {
+                    const healthUrl = base ? `${base}/api/health` : '/api/health';
+                    const endpoint = base ? `${base}/api/chat` : '/api/chat';
+                    const controller = new AbortController();
+                    const timeoutId = window.setTimeout(() => controller.abort(), 2500);
+
+                    try {
+                        const response = await fetch(healthUrl, { signal: controller.signal });
+                        if (!response.ok) {
+                            errors.push({ endpoint: healthUrl, reason: `HTTP ${response.status}` });
+                            continue;
+                        }
+                        const payload = await response.json().catch(() => ({}));
+                        if (payload?.status === 'ok') {
+                            lastHealthReport = {
+                                status: 'ok',
+                                endpoint,
+                                healthEndpoint: healthUrl,
+                                geminiConfigured: Boolean(payload?.geminiConfigured),
+                                model: payload?.model || null,
+                            };
+                            console.info('[chat] backend health check ok:', lastHealthReport);
+                            return endpoint;
+                        }
+                        errors.push({ endpoint: healthUrl, reason: 'Health response missing status=ok' });
+                    } catch (error) {
+                        errors.push({
+                            endpoint: healthUrl,
+                            reason: error?.message || 'Request failed',
+                        });
+                    } finally {
+                        window.clearTimeout(timeoutId);
+                    }
+                }
+
+                const fallbackBase = candidates.includes('') ? '' : (candidates[0] || '');
+                const fallbackEndpoint = fallbackBase ? `${fallbackBase}/api/chat` : '/api/chat';
+                lastHealthReport = {
+                    status: 'degraded',
+                    endpoint: fallbackEndpoint,
+                    errors,
+                };
+                if (errors.length) {
+                    console.warn('[chat] unable to confirm backend health:', errors);
+                }
+                return fallbackEndpoint;
+            };
+
+            return {
+                async resolve() {
+                    if (cachedEndpoint) {
+                        return cachedEndpoint;
+                    }
+                    if (!pendingPromise) {
+                        pendingPromise = tryResolve()
+                            .then((endpoint) => {
+                                cachedEndpoint = endpoint;
+                                return endpoint;
+                            })
+                            .catch((error) => {
+                                pendingPromise = null;
+                                throw error;
+                            });
+                    }
+                    return pendingPromise;
+                },
+                getLastReport() {
+                    return lastHealthReport;
+                },
+            };
+        })();
+
+        const toggleChat = () => {
+            chatModal.classList.toggle('hidden');
+            if (!chatModal.classList.contains('hidden')) {
+                userPrompt.focus();
+            }
+        };
+
+        chatToggles.forEach(toggle => toggle.addEventListener('click', toggleChat));
+        closeChatButton.addEventListener('click', () => chatModal.classList.add('hidden'));
+
+        const addMessage = (message, fromUser = false, options = {}) => {
+            const wrapper = document.createElement('div');
+            const { isStatus = false } = options;
+
+            if (isStatus) {
+                wrapper.className = 'mt-2 text-left text-xs uppercase tracking-[0.3em] text-cyan-200/70';
+                wrapper.textContent = message;
+                chatWindow.appendChild(wrapper);
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+                return wrapper;
+            }
+
+            wrapper.className = fromUser ? 'text-right' : 'text-left';
+
+            const bubble = document.createElement('div');
+            bubble.className = fromUser
+                ? 'inline-block rounded-lg bg-blue-500/30 px-3 py-2 text-sm'
+                : 'inline-block rounded-lg bg-[#12234F]/70 px-3 py-2 text-sm';
+            bubble.textContent = message;
+
+            wrapper.appendChild(bubble);
+            chatWindow.appendChild(wrapper);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+            return wrapper;
+        };
+
+        const setLoadingState = (isLoading) => {
+            if (!sendButton) {
+                return;
+            }
+            sendButton.disabled = isLoading;
+            sendButton.classList.toggle('opacity-60', isLoading);
+        };
+
+        chatForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const value = userPrompt.value.trim();
+            if (!value) {
+                return;
+            }
+
+            addMessage(value, true);
+            conversationHistory.push({ role: 'user', text: value });
+            userPrompt.value = '';
+
+            setLoadingState(true);
+            const statusNode = addMessage('Thinking...', false, { isStatus: true });
+
+            try {
+                let endpoint;
+                try {
+                    endpoint = await chatEndpointResolver.resolve();
+                } catch (resolveError) {
+                    statusNode.remove();
+                    const offlineAnswer = offlineFallbackReply(value);
+                    addMessage(offlineAnswer);
+                    conversationHistory.push({ role: 'model', text: offlineAnswer });
+                    setLoadingState(false);
+                    return;
+                }
+
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: value,
+                        history: conversationHistory
+                    })
+                });
+
+                if (!response.ok) {
+                    let errorMessage = 'Unable to reach the AI assistant.';
+                    try {
+                        const errorPayload = await response.json();
+                        if (errorPayload?.error) {
+                            errorMessage = errorPayload.error;
+                            if (errorPayload?.fix) {
+                                errorMessage = `${errorMessage} ${errorPayload.fix}`;
+                            }
+                        }
+                    } catch (err) {
+                        // ignore json parse errors
+                    }
+                    throw new Error(errorMessage);
+                }
+
+                const data = await response.json();
+                const reply = data?.reply;
+                if (!reply) {
+                    throw new Error('The AI assistant returned an empty response.');
+                }
+
+                statusNode.remove();
+                addMessage(reply);
+                conversationHistory.push({ role: 'model', text: reply });
+            } catch (error) {
+                const lastEntry = conversationHistory[conversationHistory.length - 1];
+                console.error('[chat] request failed:', error);
+                const report = typeof chatEndpointResolver.getLastReport === 'function'
+                    ? chatEndpointResolver.getLastReport()
+                    : null;
+                let message = error?.message || 'Something went wrong. Please try again.';
+                if (error instanceof TypeError) {
+                    message = 'Network error contacting the AI assistant backend.';
+                }
+
+                const helpLines = [];
+                const offlineAnswer = offlineFallbackReply(value);
+                if (report?.status === 'degraded') {
+                    const healthHint = report?.endpoint
+                        ? report.endpoint.replace(/\/api\/chat$/, '/api/health')
+                        : '/api/health';
+                    helpLines.push(`Visit ${healthHint} to confirm the backend is reachable.`);
+                    if (report?.errors?.length) {
+                        const latest = report.errors[report.errors.length - 1];
+                        if (latest?.endpoint) {
+                            helpLines.push(`Latest attempt: ${latest.endpoint} (${latest.reason || 'no response'})`);
+                        }
+                    }
+                    helpLines.push('If you are deploying on Vercel, ensure the api/ folder is included and redeploy.');
+                    helpLines.push('If you are testing locally, run `npm install` followed by `npm run dev` (or `node server.js`) to start the Express backend before opening the page.');
+                } else if (report?.status === 'ok' && report?.geminiConfigured === false) {
+                    helpLines.push('Backend is online but GEMINI_API_KEY is missing. Add it in your deployment environment variables and redeploy.');
+                }
+
+                if (offlineAnswer) {
+                    statusNode.remove();
+                    addMessage(offlineAnswer);
+                    if (!lastEntry || lastEntry.role !== 'model') {
+                        conversationHistory.push({ role: 'model', text: offlineAnswer });
+                    }
+                } else {
+                    if (lastEntry?.role === 'user') {
+                        conversationHistory.pop();
+                    }
+
+                    if (helpLines.length) {
+                        statusNode.innerHTML = `${escapeHTML(message)}<span class="block text-[0.65rem] leading-relaxed tracking-[0.25em] mt-2 text-yellow-200/80">${helpLines.map((line) => escapeHTML(line)).join('<br>')}</span>`;
+                    } else {
+                        statusNode.textContent = message;
+                    }
+
+                    statusNode.classList.remove('text-cyan-200/70');
+                    statusNode.classList.add('text-red-400');
+                }
+            } finally {
+                setLoadingState(false);
+            }
+        });
+
+        userPrompt.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' && !event.shiftKey) {
+                event.preventDefault();
+                chatForm.requestSubmit();
+            }
+        });
+    </script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+        @keyframes medalShine {
+            0% {
+                box-shadow:
+                    0 0 0 10px rgba(0, 194, 255, 0.12),
+                    0 0 45px rgba(0, 194, 255, 0.45);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow:
+                    0 0 0 10px rgba(0, 194, 255, 0.25),
+                    0 0 60px rgba(0, 194, 255, 0.65);
+                transform: scale(1.01);
+            }
+            100% {
+                box-shadow:
+                    0 0 0 10px rgba(0, 194, 255, 0.12),
+                    0 0 45px rgba(0, 194, 255, 0.45);
+                transform: scale(1);
+            }
+        }
+
