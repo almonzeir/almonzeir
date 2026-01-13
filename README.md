@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/ultrafilio_readme_banner.png" width="100%" alt="Almonzeir Hero Banner" />
+  <img src="[public/ultrafilio_readme_banner.png](https://zbazasdknnoiuknrarvz.supabase.co/storage/v1/object/public/portfolios/photos/a3d2ef06-b62f-40b5-ab4c-aeada3f85eda-1767263972217.jpeg)" width="100%" alt="Almonzeir Hero Banner" />
   
   <br />
   
@@ -84,3 +84,4 @@ npm run dev
   <br />
   <p>© 2026 Almonzer Hamid • Built with Precision & Passion</p>
 </div>
+
