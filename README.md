@@ -105,15 +105,38 @@
 
 ---
 
-## 📊 GitHub Analytics
+
+
+## 🐍 Contribution Activity
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" 
+      srcset="https://raw.githubusercontent.com/almonzeer/almonzeer/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" 
+      srcset="https://raw.githubusercontent.com/almonzeer/almonzeer/output/github-contribution-grid-snake.svg" />
+    <img alt="GitHub Contribution Snake" 
+      src="https://raw.githubusercontent.com/almonzeer/almonzeer/output/github-contribution-grid-snake.svg" 
+      width="100%" />
+  </picture>
+</div>
 
 <div align="center">
 
-<img height="150" src="https://github-readme-stats.vercel.app/api?username=almonzeer&show_icons=true&hide_border=true&bg_color=0D1117&title_color=00F260&icon_color=00F260&text_color=FFFFFF"/>
-
-<img height="150" src="https://github-readme-streak-stats.herokuapp.com/?user=almonzeer&hide_border=true&background=0D1117&ring=00F260&fire=00F260&currStreakLabel=00F260&dates=FFFFFF"/>
+<img src="https://img.shields.io/badge/AI%20Systems-Production%20Grade-00F260?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Traffic-4%2C000%2B%20Req%2FHr-blue?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Research-Scopus%20Indexed-red?style=for-the-badge"/>
 
 </div>
+## 🧠 System Identity
+
+```bash
+Name: Almonzer Hamid
+Role: AI Solutions Architect
+Mode: Production & Research
+Latency: <100ms
+Scale: Global
+Status: Shipping
 
 ---
 
@@ -143,3 +166,4 @@
 </div>
 
 © 2026 Almonzer Hamid
+
