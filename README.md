@@ -1,106 +1,145 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0D1117,00f260,0575E6&height=320&section=header&text=Almonzer%20Hamid&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=AI%20Solutions%20Architect%20%7C%20Full%20Stack%20Engineer&descAlignY=55&descAlign=62&descColor=ffffff" width="100%" />
-  
-  <br/>
-  
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=00f260&center=true&vCenter=true&width=600&lines=Building+Systems+That+Think+%26+Scale;Handling+4,000%2B+Requests%2FHour;Scopus+Indexed+Researcher;Turning+Ideas+into+Intelligent+Reality" alt="Typing SVG" />
-  </a>
-</div>
 
-<div align="center">
-  <a href="https://linkedin.com/in/almonzer-hamid">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect_Now-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="https://almonzer-hamid.vercel.app">
-    <img src="https://img.shields.io/badge/Portfolio-Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white" />
-  </a>
-  <a href="mailto:monzeer2002@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Hire_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <img src="https://komarev.com/ghpvc/?username=almonzeer&label=Profile%20Views&color=00f260&style=for-the-badge" />
-</div>
-
-<br />
-
-<div align="center"> 
-  <img src="https://github-profile-trophy.vercel.app/?username=almonzeer&theme=radical&no-frame=true&no-bg=true&margin-w=4" /> 
-</div>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0D1117,00f260,0575E6&height=300&section=header&text=Almonzer%20Hamid&fontSize=72&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=AI%20Solutions%20Architect%20%7C%20Full%20Stack%20Engineer&descAlignY=55&descColor=ffffff" width="100%" />
 
 <br/>
 
-<h2 align="center">⚡ High-Performance Tech Stack</h2>
-<div align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nextjs,react,ts,python,nodejs,supabase,gcp,docker,firebase,tensorflow,tailwind,figma&perline=6&theme=dark" />
-  </a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=26&pause=1000&color=00F260&center=true&vCenter=true&width=700&lines=Building+Systems+That+Think+%26+Scale;Handling+4%2C000%2B+Requests%2FHour;Scopus+Indexed+Researcher;Turning+Ideas+Into+Intelligent+Reality" />
+
 </div>
 
-<br />
+---
 
-<h2 align="center">🚀 Featured Intelligence</h2>
-<p align="center"><i>Click the dropdowns below to explore architecture details</i></p>
+<div align="center">
+
+<a href="https://linkedin.com/in/almonzer-hamid">
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+<a href="https://almonzer-hamid.vercel.app">
+  <img src="https://img.shields.io/badge/Portfolio-Live-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
+</a>
+
+<a href="mailto:monzeer2002@gmail.com">
+  <img src="https://img.shields.io/badge/Email-Hire%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+
+<img src="https://komarev.com/ghpvc/?username=almonzeer&label=Profile%20Views&color=00F260&style=for-the-badge"/>
+
+</div>
+
+---
+
+## 👨‍💻 About Me
+
+**AI Solutions Architect** building production-grade systems at the intersection of  
+**AI · Full Stack · Data Engineering · Research**
+
+- 📍 Based in **Kedah, Malaysia**
+- 🎓 Scopus Indexed Researcher (2024–2025)
+- 🏆 Hackathon Finalist & Winner
+- 🚀 Built SaaS handling **4,000+ req/hour**
+- 📅 **Open for Internships — March 2026**
+
+---
+
+## ⚡ High-Performance Tech Stack
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=python,ts,nextjs,react,nodejs,supabase,firebase,docker,gcp,tensorflow,tailwind,figma&perline=6&theme=dark"/>
+
+</div>
+
+---
+
+## 🚀 Featured Projects
 
 <details>
-  <summary><b>💎 UltraFolio | AI-Powered SaaS (4,000+ Reqs/Hr)</b></summary>
-  <br />
-  <div align="center">
-    <img src="https://img.shields.io/badge/Performance-4k+_Reqs/Hr-success?style=for-the-badge" />
-    <img src="https://img.shields.io/badge/Latency-<100ms-blue?style=for-the-badge" />
-    <br /><br />
-    A production-grade SaaS that transforms PDF resumes into portfolio websites using AI parsing.
-    <br/>
-    <b>Stack:</b> <code>Next.js 14</code> <code>Supabase</code> <code>OpenAI</code>
-    <br/><br/>
-    <a href="https://almonzer-hamid.vercel.app"><b>View Deployment ➜</b></a>
-  </div>
+<summary><b>💎 UltraFolio — AI-Powered SaaS</b></summary>
+
+<br/>
+
+- Converts **CV PDFs → Portfolio Websites**
+- **4,000+ requests/hour**
+- **500+ portfolios shipped in 48h**
+
+**Stack:**  
+`Next.js 14` · `Supabase` · `AI APIs` · `Framer Motion`
+
+🔗 https://almonzer-hamid.vercel.app
+
 </details>
+
+---
 
 <details>
-  <summary><b>🎮 IndabaX AI Quest | Real-Time Multiplayer</b></summary>
-  <br />
-  <div align="center">
-    <img src="https://img.shields.io/badge/Users-300+_Live-blue?style=for-the-badge" />
-    <img src="https://img.shields.io/badge/Status-Zero_Latency-success?style=for-the-badge" />
-    <br /><br />
-    Latency-free multiplayer game platform for Sudan's premier AI event.
-    <br/>
-    <b>Stack:</b> <code>React</code> <code>Node.js</code> <code>WebSockets</code>
-  </div>
+<summary><b>🎮 AI Quest — Real-Time Multiplayer Platform</b></summary>
+
+<br/>
+
+- 300+ concurrent players
+- Custom WebSocket sync
+- Zero-latency gameplay
+
+**Stack:**  
+`React` · `Node.js` · `WebSockets`
+
 </details>
+
+---
 
 <details>
-  <summary><b>🏥 Dalili Al-Dawaa | Crisis Response AI</b></summary>
-  <br />
-  <div align="center">
-    <img src="https://img.shields.io/badge/Impact-Humanitarian-red?style=for-the-badge" />
-    <img src="https://img.shields.io/badge/Tech-Geospatial_AI-orange?style=for-the-badge" />
-    <br /><br />
-    Offline-first triage platform connecting patients to pharmacies during infrastructure collapse.
-    <br/>
-    <b>Stack:</b> <code>React</code> <code>Supabase</code> <code>Geolocation</code>
-  </div>
+<summary><b>🏥 Dalili Al-Dawaa — Crisis Response AI</b></summary>
+
+<br/>
+
+- Offline-first medical triage
+- SMS fallback for no-internet zones
+- Built for **Sudan crisis response**
+
+**Stack:**  
+`React` · `Supabase` · `Firebase`
+
 </details>
 
-<br />
+---
 
-<h2 align="center">📊 GitHub Analytics</h2>
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=almonzeer&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00f260&icon_color=00f260&text_color=ffffff" height="150" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=almonzeer&theme=radical&hide_border=true&background=0D1117&ring=00f260&fire=00f260&currStreakLabel=00f260&dates=ffffff" height="150" />
-</div>
+## 📊 GitHub Analytics
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/almonzeer/almonzeer/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/almonzeer/almonzeer/output/github-contribution-grid-snake.svg">
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/almonzeer/almonzeer/output/github-contribution-grid-snake.svg" width="100%" />
-  </picture>
+
+<img height="150" src="https://github-readme-stats.vercel.app/api?username=almonzeer&show_icons=true&hide_border=true&bg_color=0D1117&title_color=00F260&icon_color=00F260&text_color=FFFFFF"/>
+
+<img height="150" src="https://github-readme-streak-stats.herokuapp.com/?user=almonzeer&hide_border=true&background=0D1117&ring=00F260&fire=00F260&currStreakLabel=00F260&dates=FFFFFF"/>
+
 </div>
 
-<br />
+---
+
+## 🧠 Research & Innovation
+
+- 📄 **Scopus Q1 Indexed Paper**
+- 🧪 ML-based GPA prediction using behavioral signatures
+- 🎤 Accepted @ **ICOCI 2025**
+
+---
+
+## 🤝 Let’s Collaborate
+
+- 💼 **Internships / Research / AI Systems**
+- 🌍 Global collaboration ready
+- ⚡ Fast response within 24h
+
+📧 **monzeer2002@gmail.com**  
+🌐 **https://almonzer-hamid.vercel.app**
+
+---
 
 <div align="center">
- <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=gradient"/>
+
 </div>
 
+© 2026 Almonzer Hamid
