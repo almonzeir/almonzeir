@@ -224,7 +224,7 @@ export default function BentoAbout() {
 
                 {/* GitHub Card */}
                 <motion.a
-                    href="https://github.com/almonzer"
+                    href="https://github.com/almonzeir"
                     target="_blank"
                     rel="noopener noreferrer"
                     initial={{ opacity: 0, y: 20 }}

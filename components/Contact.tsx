@@ -20,7 +20,7 @@ const socialLinks = [
     {
         name: "GitHub",
         icon: <Github className="w-5 h-5" />,
-        href: "https://github.com/almonzer",
+        href: "https://github.com/almonzeir",
         color: "hover:bg-gray-500/20 hover:border-gray-500/50 hover:text-gray-300",
     },
     {
