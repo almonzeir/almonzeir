@@ -16,13 +16,13 @@
   <a href="mailto:monzeer2002@gmail.com">
     <img src="https://img.shields.io/badge/Email-Hire_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <img src="https://komarev.com/ghpvc/?username=almonzeer&label=Views&color=00f260&style=for-the-badge" />
+  <img src="https://komarev.com/ghpvc/?username=almonzer&label=Views&color=00f260&style=for-the-badge" />
 </div>
 
 <br />
 
 <div align="center"> 
-  <img src="https://github-profile-trophy.vercel.app/?username=almonzeer&theme=radical&no-frame=true&no-bg=true&margin-w=4" /> 
+  <img src="https://github-profile-trophy.vercel.app/?username=almonzer&theme=radical&no-frame=true&no-bg=true&margin-w=4" />
 </div>
 
 <br/>
@@ -84,15 +84,15 @@
 
 <h2 align="center">📊 GitHub Analytics</h2>
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=almonzeer&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00f260&icon_color=00f260&text_color=ffffff" height="150" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=almonzeer&theme=radical&hide_border=true&background=0D1117&ring=00f260&fire=00f260&currStreakLabel=00f260&dates=ffffff" height="150" />
+  <img src="https://github-readme-stats.vercel.app/api?username=almonzer&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00f260&icon_color=00f260&text_color=ffffff" height="150" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=almonzer&theme=radical&hide_border=true&background=0D1117&ring=00f260&fire=00f260&currStreakLabel=00f260&dates=ffffff" height="150" />
 </div>
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/almonzeer/almonzeer/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/almonzeer/almonzeer/output/github-contribution-grid-snake.svg">
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/almonzeer/almonzeer/output/github-contribution-grid-snake.svg" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/almonzer/almonzer/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/almonzer/almonzer/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/almonzer/almonzer/output/github-contribution-grid-snake.svg" width="100%" />
   </picture>
 </div>
 

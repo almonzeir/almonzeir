@@ -26,7 +26,7 @@ export default function FloatingDock() {
                 transition={{ delay: 2.5, type: "spring" }}
             >
                 {navItems.map((item, index) => (
-                    <Link key={item.name} href={item.href}>
+                    <Link key={item.name} href={item.href} aria-label={item.name}>
                         <motion.div
                             className="relative p-3 rounded-full hover:bg-white/10 transition-colors cursor-pointer group"
                             onHoverStart={() => setHoveredIndex(index)}

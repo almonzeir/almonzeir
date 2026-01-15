@@ -37,7 +37,7 @@ export default function Navbar() {
             >
                 <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
                     {/* Logo */}
-                    <a href="#" className="flex items-center gap-2 group">
+                    <a href="#" className="flex items-center gap-2 group" aria-label="Almonzer Home">
                         <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-violet-500 flex items-center justify-center">
                             <span className="text-white font-bold text-lg">A</span>
                         </div>
@@ -74,6 +74,8 @@ export default function Navbar() {
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className="lg:hidden w-10 h-10 rounded-xl glass flex items-center justify-center text-white"
+                        aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                        aria-expanded={isMobileMenuOpen}
                     >
                         {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                     </button>
