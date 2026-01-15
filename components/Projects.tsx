@@ -238,7 +238,7 @@ function Card3D({ project, index }: { project: Project; index: number }) {
 
                 <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between">
                     <span className="text-xs text-gray-500 font-mono group-hover:text-cyan-400 transition-colors">
-                        // DEPLOYED
+                        {`// DEPLOYED`}
                     </span>
                     <a
                         href={project.link}
