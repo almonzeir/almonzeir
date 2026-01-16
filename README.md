@@ -88,9 +88,19 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=almonzeir&theme=radical&hide_border=true&background=0D1117&ring=00f260&fire=00f260&currStreakLabel=00f260&dates=ffffff" height="150" />
 </div>
 
+<br />
+
+<div align="center">
+  <a href="https://github.com/ashutosh00710/github-readme-activity-graph">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=almonzeir&theme=react-dark&bg_color=0D1117&color=00f260&line=00f260&point=ffffff&area=true&hide_border=true" width="100%" />
+  </a>
+</div>
+
+<br />
+
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake-neon.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake.svg">
     <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake.svg" width="100%" />
   </picture>
