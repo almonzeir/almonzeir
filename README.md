@@ -1,36 +1,36 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=300&section=header&text=Almonzer%20Hamid&fontSize=80&fontColor=00f260&animation=fadeIn&fontAlignY=35&desc=AI%20Solutions%20Architect%20%7C%20Full%20Stack%20Engineer&descAlignY=55&descAlign=62&descColor=ffffff" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=300&section=header&text=Almonzer%20Hamid&fontSize=80&fontColor=00f260&animation=fadeIn&fontAlignY=35&desc=AI%20Solutions%20Architect%20%7C%20Full%20Stack%20Engineer&descAlignY=55&descAlign=62&descColor=ffffff" width="100%" alt="Almonzer Hamid - AI Solutions Architect Header" />
 
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=00f260&center=true&vCenter=true&width=600&lines=Building+Systems+That+Think+%26+Scale;Handling+4,000%2B+Requests%2FHour;Scopus+Indexed+Researcher;Turning+Ideas+into+Intelligent+Reality" alt="Typing SVG" />
+  <a href="https://git.io/typing-svg" aria-label="Typing SVG Generator">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=00f260&center=true&vCenter=true&width=600&lines=Building+Systems+That+Think+%26+Scale;Handling+4,000%2B+Requests%2FHour;Scopus+Indexed+Researcher;Turning+Ideas+into+Intelligent+Reality" alt="Typing SVG showing skills" />
   </a>
 </div>
 
 <div align="center">
-  <a href="https://linkedin.com/in/almonzer-hamid">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  <a href="https://linkedin.com/in/almonzer-hamid" aria-label="Connect on LinkedIn">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge" />
   </a>
-  <a href="https://almonzer-hamid.vercel.app">
-    <img src="https://img.shields.io/badge/Portfolio-Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  <a href="https://almonzer-hamid.vercel.app" aria-label="View Portfolio">
+    <img src="https://img.shields.io/badge/Portfolio-Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio Badge" />
   </a>
-  <a href="mailto:monzeer2002@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Hire_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+  <a href="mailto:monzeer2002@gmail.com" aria-label="Send Email">
+    <img src="https://img.shields.io/badge/Email-Hire_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Badge" />
   </a>
-  <img src="https://komarev.com/ghpvc/?username=almonzeir&label=Views&color=00f260&style=for-the-badge" />
+  <img src="https://komarev.com/ghpvc/?username=almonzeir&label=Views&color=00f260&style=for-the-badge" alt="Profile View Counter" />
 </div>
 
 <br />
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=almonzeir&theme=radical&no-frame=true&no-bg=true&margin-w=4" />
+  <img src="https://github-profile-trophy.vercel.app/?username=almonzeir&theme=radical&no-frame=true&no-bg=true&margin-w=4" alt="GitHub Trophies" />
 </div>
 
 <br/>
 
 <h2 align="center">⚡ High-Performance Tech Stack</h2>
 <div align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nextjs,react,ts,python,nodejs,supabase,gcp,docker,firebase,tensorflow,tailwind,figma&perline=6&theme=dark" />
+  <a href="https://skillicons.dev" aria-label="Skill Icons">
+    <img src="https://skillicons.dev/icons?i=nextjs,react,ts,python,nodejs,supabase,gcp,docker,firebase,tensorflow,tailwind,figma&perline=6&theme=dark" alt="Tech Stack Icons: Next.js, React, TypeScript, Python, Node.js, Supabase, GCP, Docker, Firebase, TensorFlow, Tailwind, Figma" />
   </a>
 </div>
 
@@ -43,14 +43,14 @@
   <summary><b>💎 UltraFolio | AI-Powered SaaS (4,000+ Reqs/Hr)</b></summary>
   <br />
   <div align="center">
-    <img src="https://img.shields.io/badge/Performance-4k+_Reqs/Hr-success?style=for-the-badge" />
-    <img src="https://img.shields.io/badge/Latency-<100ms-blue?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/Performance-4k+_Reqs/Hr-success?style=for-the-badge" alt="Performance Badge: 4k+ Requests per Hour" />
+    <img src="https://img.shields.io/badge/Latency-<100ms-blue?style=for-the-badge" alt="Latency Badge: <100ms" />
     <br /><br />
     A production-grade SaaS that transforms PDF resumes into portfolio websites using AI parsing.
     <br/>
     <b>Stack:</b> <code>Next.js 14</code> <code>Supabase</code> <code>OpenAI</code>
     <br/><br/>
-    <a href="https://almonzer-hamid.vercel.app"><b>View Deployment ➜</b></a>
+    <a href="https://almonzer-hamid.vercel.app" aria-label="View UltraFolio Deployment"><b>View Deployment ➜</b></a>
   </div>
 </details>
 
@@ -58,8 +58,8 @@
   <summary><b>🎮 IndabaX AI Quest | Real-Time Multiplayer</b></summary>
   <br />
   <div align="center">
-    <img src="https://img.shields.io/badge/Users-300+_Live-blue?style=for-the-badge" />
-    <img src="https://img.shields.io/badge/Status-Zero_Latency-success?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/Users-300+_Live-blue?style=for-the-badge" alt="Users Badge: 300+ Live" />
+    <img src="https://img.shields.io/badge/Status-Zero_Latency-success?style=for-the-badge" alt="Status Badge: Zero Latency" />
     <br /><br />
     Latency-free multiplayer game platform for Sudan's premier AI event.
     <br/>
@@ -71,8 +71,8 @@
   <summary><b>🏥 Dalili Al-Dawaa | Crisis Response AI</b></summary>
   <br />
   <div align="center">
-    <img src="https://img.shields.io/badge/Impact-Humanitarian-red?style=for-the-badge" />
-    <img src="https://img.shields.io/badge/Tech-Geospatial_AI-orange?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/Impact-Humanitarian-red?style=for-the-badge" alt="Impact Badge: Humanitarian" />
+    <img src="https://img.shields.io/badge/Tech-Geospatial_AI-orange?style=for-the-badge" alt="Tech Badge: Geospatial AI" />
     <br /><br />
     Offline-first triage platform connecting patients to pharmacies during infrastructure collapse.
     <br/>
@@ -84,20 +84,24 @@
 
 <h2 align="center">📊 GitHub Analytics</h2>
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=almonzeir&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00f260&icon_color=00f260&text_color=ffffff" height="150" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=almonzeir&theme=radical&hide_border=true&background=0D1117&ring=00f260&fire=00f260&currStreakLabel=00f260&dates=ffffff" height="150" />
+  <img src="https://github-readme-stats.vercel.app/api?username=almonzeir&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00f260&icon_color=00f260&text_color=ffffff" height="150" alt="GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=almonzeir&theme=radical&hide_border=true&background=0D1117&ring=00f260&fire=00f260&currStreakLabel=00f260&dates=ffffff" height="150" alt="GitHub Streak" />
 </div>
 
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake.svg">
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake.svg" width="100%" />
+    <img alt="GitHub Contribution Grid Snake Animation" src="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake.svg" width="100%" />
   </picture>
+</div>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/almonzeir/almonzeir/output/profile-night-green.svg" alt="3D Contribution Graph" width="100%" />
 </div>
 
 <br />
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=100&section=footer" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117&height=100&section=footer" width="100%" alt="Footer Decoration" />
 </div>

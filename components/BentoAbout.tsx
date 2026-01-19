@@ -83,7 +83,7 @@ export default function BentoAbout() {
                             </h3>
                             <p className="text-gray-400 text-sm leading-relaxed max-w-md">
                                 I build intelligent digital products that blend strategy, storytelling, and emerging AI technologies.
-                                From Sudan to Malaysia, I'm on a mission to make technology serve humanity.
+                                From Sudan to Malaysia, I&apos;m on a mission to make technology serve humanity.
                             </p>
                         </div>
 

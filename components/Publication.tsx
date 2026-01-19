@@ -115,7 +115,7 @@ export default function Publication() {
                             <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
                                 <BookOpen className="w-6 h-6 text-cyan-400 mb-3" />
                                 <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Study</p>
-                                <p className="text-white text-sm">"Predicting GPA Using Mobile & Study Behavior Data"</p>
+                                <p className="text-white text-sm">&quot;Predicting GPA Using Mobile & Study Behavior Data&quot;</p>
                             </div>
                             <div className="p-4 rounded-2xl bg-white/5 border border-white/10">
                                 <Brain className="w-6 h-6 text-cyan-400 mb-3" />
@@ -141,7 +141,7 @@ export default function Publication() {
                         {/* Quote */}
                         <blockquote className="p-6 rounded-2xl bg-white/5 border border-white/10 mb-8">
                             <p className="text-lg text-white/90 italic text-center">
-                                "A landmark in predictive equity for higher education."
+                                &quot;A landmark in predictive equity for higher education.&quot;
                             </p>
                             <footer className="text-center mt-4 text-sm text-gray-500">
                                 — Global Impact Review Board 2025
