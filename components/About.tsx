@@ -107,7 +107,7 @@ export default function About() {
                             <div className="mt-8 pt-8 border-t border-white/5">
                                 <p className="text-gray-500 text-sm mb-4 uppercase tracking-wider">Core Belief</p>
                                 <p className="text-xl text-white/90 italic">
-                                    "Technology should serve people, curiosity, and meaningful impact."
+                                    &quot;Technology should serve people, curiosity, and meaningful impact.&quot;
                                 </p>
                             </div>
                         </div>

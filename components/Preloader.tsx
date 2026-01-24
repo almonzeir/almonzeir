@@ -3,17 +3,17 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const bootSequence = [
+    "> Initializing Almonzer_OS...",
+    "> Loading Neural Weights...",
+    "> Optimizing Render Engine...",
+    "> Establishing Uplink...",
+    "> Success."
+];
+
 export default function Preloader() {
     const [loading, setLoading] = useState(true);
     const [lines, setLines] = useState<string[]>([]);
-
-    const bootSequence = [
-        "> Initializing Almonzer_OS...",
-        "> Loading Neural Weights...",
-        "> Optimizing Render Engine...",
-        "> Establishing Uplink...",
-        "> Success."
-    ];
 
     useEffect(() => {
         let delay = 0;
