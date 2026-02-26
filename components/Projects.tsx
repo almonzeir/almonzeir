@@ -122,7 +122,7 @@ const educationProjects: Project[] = [
         tech: ["OpenAI API", "LangChain", "Python"],
         link: "#",
         linkText: "View Framework",
-        image: "/Images/say-simple.png",
+        image: "/Images/ai-content-creator.png",
         gradient: "from-amber-500 to-orange-500",
         icon: <Brain className="w-5 h-5 text-amber-400" />
     },

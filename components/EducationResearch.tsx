@@ -40,7 +40,7 @@ const projects: Project[] = [
         description: "Structured prompt framework for educators and media teams to spin up lessons, social threads, and explainer content instantly.",
         tags: ["OpenAI API", "LangChain"],
         link: "https://www.instagram.com/almonzer_hamid/",
-        image: "/Images/say-simple.png", // Using a placeholder if specific image is missing, or update later
+        image: "/Images/ai-content-creator.png",
         color: "from-purple-500 to-pink-500",
     },
     {
