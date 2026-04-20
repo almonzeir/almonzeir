@@ -52,12 +52,12 @@ export default function Contact() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <span className="chip mb-4 inline-block">Let's Connect</span>
+                    <span className="chip mb-4 inline-block">Let&apos;s Connect</span>
                     <h2 className="section-heading mb-4">
                         Ready to <span className="text-gradient-static">Collaborate?</span>
                     </h2>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                        I'm always open to new opportunities, collaborations, and interesting conversations.
+                        I&apos;m always open to new opportunities, collaborations, and interesting conversations.
                         Feel free to reach out!
                     </p>
                 </motion.div>
@@ -167,9 +167,9 @@ export default function Contact() {
                                 <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20 flex items-center justify-center border border-white/10 mb-6">
                                     <Send className="w-8 h-8 text-cyan-400" />
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-3">Let's Build Something Great</h3>
+                                <h3 className="text-xl font-bold text-white mb-3">Let&apos;s Build Something Great</h3>
                                 <p className="text-gray-400 text-sm mb-6">
-                                    Have a project in mind or want to collaborate? I'd love to hear from you!
+                                    Have a project in mind or want to collaborate? I&apos;d love to hear from you!
                                 </p>
                                 <a
                                     href="mailto:monzeer2002@gmail.com"
