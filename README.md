@@ -84,13 +84,17 @@
 
 <h2 align="center">📊 GitHub Analytics</h2>
 <div align="center">
+  <img src="https://raw.githubusercontent.com/almonzeir/almonzeir/output/profile-night-green.svg" alt="3D GitHub contribution graph" width="100%" />
+</div>
+
+<div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=almonzeir&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00f260&icon_color=00f260&text_color=ffffff" height="150" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=almonzeir&theme=radical&hide_border=true&background=0D1117&ring=00f260&fire=00f260&currStreakLabel=00f260&dates=ffffff" height="150" />
 </div>
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake-neon.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake.svg">
     <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake.svg" width="100%" />
   </picture>
