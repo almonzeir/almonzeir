@@ -90,10 +90,16 @@
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake-neon.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake.svg">
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake.svg" width="100%" />
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/almonzeir/almonzeir/output/github-contribution-grid-snake-neon.svg" width="100%" />
   </picture>
+</div>
+
+<br />
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/almonzeir/almonzeir/output/profile-3d-contrib/profile-green-animate.svg" alt="3d contribution graph" width="100%" />
 </div>
 
 <br />
