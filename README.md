@@ -96,6 +96,10 @@
   </picture>
 </div>
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/almonzeir/almonzeir/output/profile-night-green.svg" alt="3D GitHub contribution graph" width="100%" />
+</div>
+
 <br />
 
 <div align="center">
