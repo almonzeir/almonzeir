@@ -26,7 +26,7 @@ Industry ML work (not public): offline OCR for handwritten Arabic prescriptions 
 
 ## Tools
 
-Python, PyTorch, ONNX / TFLite, Hugging Face, FastAPI, TypeScript, Next.js, React, Flutter, Supabase / PostgreSQL, Docker
+Python, PyTorch, ONNX / TFLite, FastAPI, TypeScript, Next.js, React, Flutter, Supabase / PostgreSQL, Docker
 
 ## Contact
 
