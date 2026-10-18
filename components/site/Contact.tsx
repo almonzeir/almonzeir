@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
       <Reveal>
-        <div className="card relative overflow-hidden p-7 sm:p-12">
+        <div className="card relative overflow-hidden p-5 sm:p-12">
           <div className="glow pointer-events-none absolute inset-0" aria-hidden />
           <div className="relative">
             <p className="eyebrow mb-3">
@@ -33,7 +33,7 @@ export default function Contact() {
                   href={href}
                   target={href.startsWith("mailto:") ? undefined : "_blank"}
                   rel="noopener noreferrer"
-                  className="group flex items-center justify-between gap-4 rounded-xl border border-white/[0.08] px-5 py-4 transition-colors hover:border-[var(--accent)]"
+                  className="group flex min-w-0 items-center justify-between gap-4 rounded-xl border border-white/[0.08] px-5 py-4 transition-colors hover:border-[var(--accent)]"
                 >
                   <span className="flex min-w-0 items-center gap-4">
                     <Icon className="h-5 w-5 flex-none text-[var(--ink-3)] group-hover:text-[var(--accent)]" />
