@@ -1,43 +1,24 @@
-import Hero from "@/components/Hero";
-import UltraFolioShowcase from "@/components/UltraFolioShowcase";
-import BentoAbout from "@/components/BentoAbout";
-import HackathonHighlights from "@/components/HackathonHighlights";
-import ExperienceTimeline from "@/components/ExperienceTimeline";
-import Contact from "@/components/Contact";
-import CommandTerminal from "@/components/CommandTerminal";
-import FloatingDock from "@/components/FloatingDock";
-import Preloader from "@/components/Preloader";
-import SmoothScrolling from "@/components/SmoothScrolling";
-import Projects from "@/components/Projects";
-import Publication from "@/components/Publication";
-import ChatInterface from "@/components/ChatInterface";
+import Nav from "@/components/site/Nav";
+import Hero from "@/components/site/Hero";
+import Work from "@/components/site/Work";
+import Research from "@/components/site/Research";
+import Experience from "@/components/site/Experience";
+import AskAI from "@/components/site/AskAI";
+import Contact from "@/components/site/Contact";
 
 export default function Home() {
   return (
-    <SmoothScrolling>
-      <main className="min-h-screen bg-[#030712] text-white relative">
-        <div className="bg-noise" />
-
-        <Preloader />
-
-        <FloatingDock />
-
+    <>
+      <Nav />
+      <main>
         <Hero />
-
-        <div className="relative z-10 space-y-24 pb-32">
-          <BentoAbout />
-          <UltraFolioShowcase />
-          <Projects />
-          <Publication />
-          <HackathonHighlights />
-          <ExperienceTimeline />
-          <ChatInterface />
-          <Contact />
-        </div>
-
-        <CommandTerminal />
+        <div className="border-t border-white/[0.06]" />
+        <Work />
+        <Research />
+        <Experience />
+        <AskAI />
+        <Contact />
       </main>
-    </SmoothScrolling>
+    </>
   );
 }
-
